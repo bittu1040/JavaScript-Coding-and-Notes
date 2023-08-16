@@ -1,0 +1,10 @@
+.projects{
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #c8c2c2;
+    border-radius: 4px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #ea9393;
+    color: rgb(185, 237, 12);
+}
