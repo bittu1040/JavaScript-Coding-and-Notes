@@ -1,5 +1,6 @@
 // scope chain & lexical environment
 // variable having access in its parent scope
+// inner function me outer function ke scope ka access hota hai. -- lexical scope
 
 function outer() {
     let username = "Bittu";
