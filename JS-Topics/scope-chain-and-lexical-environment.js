@@ -2,6 +2,8 @@
 // variable having access in its parent scope
 // inner function me outer function ke scope ka access hota hai. -- lexical scope
 
+// Lexical environment = local memory + lexical environment of parent
+
 function outer() {
     let username = "Bittu";
     // console.log(secret)
@@ -29,5 +31,24 @@ if (Math.random() > 0.5) {
 }
 
 // console.log(x);
+
+
+function a(){
+    var x=10;
+    console.log(x);
+    b();
+     function b(){
+        console.log(y)
+     }
+}
+
+var y=20;
+var z=30;
+a();
+
+
+
+
+
 
 

@@ -26,6 +26,7 @@ z();
 // let and const is blocked scope, so loop jitna bar chlta hai, every time ek block create hota hai jisme settimeout store rhta hai aur usme i ka value store rhta hai. 
 // var keyword jb hm use krte hain, wo block scope nhi hota hai, is time i ka value global scope me update hota jata hai, isliye last me hmko 6 milta hai jhan pe for loop stop hota hai. 
 
+/*
 function y() {
     for(let i=1; i<=5; i++){
         setTimeout(() => {
@@ -37,6 +38,34 @@ function y() {
 
 y();
 
+*/
+
+
+// example 2
+
+function outer(){
+    var a=20;
+    function inner(){
+        console.log(a)
+    }
+    return inner;
+}
+var a=10;
+console.log(a);
+
+
+outer()();
+
+
+// example 3
+
+function test1(x){
+   return function test2(y){
+        return x+y;
+    }
+}
+
+console.log(test1(2)(3))
 
 
 

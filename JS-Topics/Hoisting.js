@@ -18,3 +18,7 @@ var a;
 
 
 // question 1:
+
+age=30;
+console.log("age", age)
+let age=20;
