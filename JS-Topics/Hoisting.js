@@ -6,6 +6,7 @@
 */
 
 // we can access function before it is declared. 
+/*
 test()
 function test(){
     console.log("bbb")
@@ -16,9 +17,15 @@ test()
 console.log(a);
 var a;
 
+*/
+
 
 // question 1:
 
-age=30;
-console.log("age", age)
-let age=20;
+
+console.log(b1);
+console.log(a1);
+
+
+var a1= 10;
+let b1;
