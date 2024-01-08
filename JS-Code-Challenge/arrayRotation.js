@@ -14,3 +14,13 @@ function arrayRotation(arr, numberOfRotation){
 }
 
 console.log(arrayRotation([1,2,3,4,5], 3))
+
+
+// function arrayRotation(arr, numberOfRotation){
+
+//     let deletedArray= arr.splice(arr.length- numberOfRotation);
+
+//     return deletedArray
+// }
+
+// console.log(arrayRotation([1,2,3,4,5], 3))
