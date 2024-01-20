@@ -83,8 +83,16 @@ let person1= {
     age: 50,
 }
 
-// person.greet1.call(person1);
-person.greet1();
+person.greet1.call(person1); 
+person.greet1();    
+
+
+const greet4 = ()=> {
+    console.log(this);
+    console.log(this.age);
+}
+
+greet4();
 
 
 
