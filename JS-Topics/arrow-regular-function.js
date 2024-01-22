@@ -96,6 +96,19 @@ greet4();
 
 
 
+// let obj= {
+//     name1: "Bittu",
 
+//     getName: function(){
+
+//         let getName1= ()=>{
+//             console.log(this.name1)
+//         }
+
+//         getName1();
+//     }
+// }
+
+// obj.getName()
 
 
