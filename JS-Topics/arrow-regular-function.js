@@ -1,9 +1,6 @@
 // this refers to the object that is currently calling the function in case of regular function
 // arrow function: this refers to the lexical parent of the function
 
-
-
-
 // console.log(this);
 
 // Example 1:
@@ -16,7 +13,7 @@ function displayAge(){
     console.log(this)
 }
 displayAge();   
-*/ 
+*/
 // It is same as window.displayAge();
 // here this refers to window because window is calling displayAge function
 
@@ -57,58 +54,48 @@ person.arrowMethod.displayAge();
 
 */
 
-
 // example 3
 
-
 var person = {
-    age: 28,
-    greet1: function(){
-        console.log("greet 1",this);
-        console.log("greet 1",this.age);
-        function greet2(){
-            console.log("greet 2",this);
-            console.log("greet 2",this.age);
-        }
-        const greet3=()=>{
-            console.log("greet 3",this);
-            console.log("greet 3",this.age);
-        }
-        greet2();
-        greet3();
+  age: 28,
+  greet1: function () {
+    console.log("greet 1", this);
+    console.log("greet 1", this.age);
+    function greet2() {
+      console.log("greet 2", this);
+      console.log("greet 2", this.age);
     }
-}
+    const greet3 = () => {
+      console.log("greet 3", this);
+      console.log("greet 3", this.age);
+    };
+    greet2();
+    greet3();
+  },
+};
 
-let person1= {
-    age: 50,
-}
+let person1 = {
+  age: 50,
+};
 
-person.greet1.call(person1); 
-person.greet1();    
+// person.greet1.call(person1);
+person.greet1();
 
+const greet4 = () => {
+  console.log(this);
+  console.log(this.age);
+};
 
-const greet4 = ()=> {
-    console.log(this);
-    console.log(this.age);
-}
+// greet4();
 
-greet4();
-
-
-
-// let obj= {
-//     name1: "Bittu",
-
-//     getName: function(){
-
-//         let getName1= ()=>{
-//             console.log(this.name1)
-//         }
-
-//         getName1();
-//     }
-// }
-
-// obj.getName()
-
-
+// example 4
+const person2 = {
+  name11: "Bittu",
+  sayhello: function () {
+    const innerNormal = () => {
+      console.log(this.name11);
+    };
+    innerNormal();
+  },
+};
+person2.sayhello();
