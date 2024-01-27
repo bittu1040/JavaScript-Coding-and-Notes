@@ -1,6 +1,6 @@
 // pure function always gives the same output for the same input. 
 // It always return the same result when you pass the same arguments
-// output of pure function should have any side effect: it means that any other operation should not affect the result. 
+// output of pure function should not have any side effect: it means that any other operation should not affect the result. 
 
 // example of the side effects are,
 
