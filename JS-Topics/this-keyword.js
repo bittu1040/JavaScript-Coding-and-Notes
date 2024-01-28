@@ -77,6 +77,7 @@ console.log(obj1);
 */
 
 
+// -----------------example 4 ---------------- //
 
 // arrow function example with this keyword
 const obj = {
@@ -91,3 +92,22 @@ const obj = {
   
   obj.sayName();   // obj
   obj.arrowSayName();   //undefined
+
+
+  // -----------------example 5 ---------------- //
+  
+  function Outer(){
+    this.value= 1;
+    this.getValue= function(){
+      console.log("regular function",this.value);
+    }
+  }
+
+  Outer.prototype.getArrowValue= ()=>{
+    console.log("arrow function",this.value);
+  }
+
+  const outer1= new Outer();
+
+  outer1.getArrowValue();
+  outer1.getValue();
