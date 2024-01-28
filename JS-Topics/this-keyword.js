@@ -96,6 +96,7 @@ const obj = {
 
   // -----------------example 5 ---------------- //
   
+  var value= 30;
   function Outer(){
     this.value= 1;
     this.getValue= function(){
