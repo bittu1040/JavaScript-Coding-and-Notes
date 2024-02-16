@@ -131,5 +131,56 @@ function returnMissingNumber(arr) {
 console.log(returnMissingNumber([1, 2, 3, 5, 6, 8]));
 
 
+// 8. 
+// group items of array by category
+// input
+// const products = [
+// { name: 'apples', category: 'fruits' },
+// { name: 'oranges', category: 'fruits' },
+// { name: 'potatoes', category: 'vegetables' }
+//  ];
+
+// output:
+// const products = {
+//     fruits: [
+//      { name: 'apples', category: 'fruits' },
+//      { name: 'oranges', category: 'fruits' },
+//     ],
+//     vegetables: [
+//     { name: 'potatoes', category: 'vegetables' }]
+
+//  };
+
+
+
+const products = [
+    { name: 'apples', category: 'fruits' },
+    { name: 'oranges', category: 'fruits' },
+    { name: 'potatoes', category: 'vegetables' }
+];
+
+function groupItems(array){
+    let groupedObj = {
+        fruits: [],
+        vegetables: []
+    };
+    for(let i=0; i<array.length; i++){
+        if(array[i].category==="fruits"){
+            groupedObj.fruits.push({name: array[i].name, category: array[i].category})
+        }
+        if(array[i].category==="vegetables"){
+            groupedObj.vegetables.push({name: array[i].name, category: array[i].category})
+        }
+    }
+
+    return groupedObj
+}
+
+
+console.log(groupItems(products))
+
+
+
+
 
 
