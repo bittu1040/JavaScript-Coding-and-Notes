@@ -84,6 +84,8 @@ console.log(car2.testMethod());
 console.log(car1.testMethod());
 */
 
+
+/*
 function Car(name, brand, color){
     this.name= name;
     this.brand= brand;
@@ -104,6 +106,75 @@ Car.prototype.start= function(){
 console.log(car1.start());
 
 console.log(car1.name)
+
+*/
+
+
+
+// abstraction
+// Abstraction involves hiding the complexity of the implementation and showing only the necessary features of an object. 
+// It allows programmers to focus on the essential aspects of an object while hiding the irrelevant details.
+// In JavaScript, abstraction can be achieved through encapsulation
+
+// To remember this: we can take example of car- we only know to drive, we don't know how car is running. 
+// and me also dont want to know how this car drive is happening behind the scene. 
+
+// Lets see the example with the same car:
+
+
+/*
+class Car{
+    constructor(name, brand, color){
+        this.name= name;
+        this.brand= brand;
+        this.color= color;
+    }
+    startCar(){
+        console.log(`${this.name}  is started`);
+    }
+    stop(){
+        console.log(`${this.name} is stopped`);
+    }
+}
+
+let car1= new Car("800", "maruti", "red" )
+car1.startCar();
+car1.stop();
+
+
+*/
+
+
+
+// polymorphism
+// This allows methods to behave differently depending on the specific type of object they are called on.
+// Polymorphism allows different objects to respond to the same method or property in his own way.
+
+class Shape {
+    constructor(name) {
+        this.name = name;
+    }
+    draw() {
+        console.log(`Drawing a ${this.name}`);
+    }
+}
+
+class Circle extends Shape {
+    draw() {
+        console.log(`Drawing a Circle`);
+    }
+}
+
+
+let shape = new Shape("Shape");
+let circle = new Circle("nn");
+
+console.log(shape)
+console.log(circle)
+
+shape.draw(); 
+circle.draw();
+
 
 
 
