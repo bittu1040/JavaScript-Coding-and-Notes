@@ -1,60 +1,72 @@
-.projects{
-    width: 200px;
-    padding: 10px;
-    border: 1px solid #c8c2c2;
-    border-radius: 4px;
-    font-size: 20px;
-    text-decoration: none;
-    background-color: #ea9393;
-    color: rgb(185, 237, 12);
+.projects {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #c8c2c2;
+  border-radius: 4px;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #ea9393;
+  color: rgb(185, 237, 12);
 }
+
 .collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  .active, .collapsible:hover {
-    background-color: #555;
-  }
-  
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
-  #outer {
-    width: 200px;
-    background-color: red;
-    padding: 20px;
-  }
-  #middle {
-    background-color: green;
-    padding: 20px;
-  }
-  #inner {
-    background-color: blue;
-    padding: 20px;
-  }
+.active,
+.collapsible:hover {
+  background-color: #555;
+}
 
-  #outer1 {
-    width: 200px;
-    background-color: red;
-    padding: 20px;
-  }
-  #middle1 {
-    background-color: green;
-    padding: 20px;
-  }
-  #inner1 {
-    background-color: blue;
-    padding: 20px;
-  }
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+#outer {
+  width: 200px;
+  background-color: red;
+  padding: 20px;
+}
+
+#middle {
+  background-color: green;
+  padding: 20px;
+}
+
+#inner {
+  background-color: blue;
+  padding: 20px;
+}
+
+#outer1 {
+  width: 200px;
+  background-color: red;
+  padding: 20px;
+}
+
+#middle1 {
+  background-color: green;
+  padding: 20px;
+}
+
+#inner1 {
+  background-color: blue;
+  padding: 20px;
+}
+
+.main-box {
+  border: 1px solid black;
+  width: 200px;
+  padding: 10px;
+}
