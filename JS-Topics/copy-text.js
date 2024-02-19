@@ -1,6 +1,6 @@
 // Copy text in JavaScript
 
-// writeText method is used to copy clipboad content and it return Promise if resolve then text is copied otherwise It rejects. 
+// writeText method is used to copy clipboard content and it return Promise if resolve then text is copied otherwise It rejects. 
 // A Promise that is resolved once the clipboard's contents have been updated.
 // The clipboard contents are only accessible to the user and can be pasted outside due to security reason. 
 // This means copied data can't be useful in your program. You can't print this in your console. 
