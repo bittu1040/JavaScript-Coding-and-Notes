@@ -128,7 +128,7 @@ function returnMissingNumber(arr) {
     return missingNumberList;
 }
 
-console.log(returnMissingNumber([1, 2, 3, 5, 6, 8]));
+// console.log(returnMissingNumber([1, 2, 3, 5, 6, 8]));
 
 
 // 8. 
@@ -159,17 +159,19 @@ const products = [
     { name: 'potatoes', category: 'vegetables' }
 ];
 
-function groupItems(array){
+// way 0
+
+function groupItems(array) {
     let groupedObj = {
         fruits: [],
         vegetables: []
     };
-    for(let i=0; i<array.length; i++){
-        if(array[i].category==="fruits"){
-            groupedObj.fruits.push({name: array[i].name, category: array[i].category})
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].category === "fruits") {
+            groupedObj.fruits.push({ name: array[i].name, category: array[i].category })
         }
-        if(array[i].category==="vegetables"){
-            groupedObj.vegetables.push({name: array[i].name, category: array[i].category})
+        if (array[i].category === "vegetables") {
+            groupedObj.vegetables.push({ name: array[i].name, category: array[i].category })
         }
     }
 
@@ -177,7 +179,90 @@ function groupItems(array){
 }
 
 
-console.log(groupItems(products))
+// console.log(groupItems(products))
+
+
+
+
+
+// way 1
+
+const input = [
+    { name: 'apples', category: 'fruits', price: 100 },
+    { name: 'oranges', category: 'fruits', price: 30 },
+    { name: 'potatoes', category: 'vegetables', price: 20 }
+];
+
+let Output =
+{
+    fruits: [
+        { name: 'apples', category: 'fruits', price: 10 },
+        { name: 'oranges', category: 'fruits', price: 30 }
+    ],
+    vegetables: [{ name: 'potatoes', category: 'vegetables', price: 20 }]
+}
+
+function groupItem1(array) {
+    let groupedObj1 = {};
+    for (let data of array) {
+        if (groupedObj1[data.category]) {
+            groupedObj1[data.category].push(data);
+        }
+        else {
+            groupedObj1[data.category] = [data]
+        }
+    }
+    return groupedObj1
+}
+
+// console.log(groupItem1(input));
+
+
+// way 2
+
+const arr1 = [
+    { name: 'apples', category: 'fruits', price: 10 },
+    { name: 'oranges', category: 'fruits', price: 30 },
+    { name: 'potatoes', category: 'vegetables', price: 20 }
+];
+
+function groupItems(array) {
+    let groupedObj = {}
+    array.map((data) => {
+        if (groupedObj[data.category]) {
+            groupedObj[data.category].push(data)
+        }
+        else {
+            groupedObj[data.category] = [data]
+        }
+    })
+    return groupedObj;
+}
+// console.log(groupItems(arr1))
+
+
+//way 3
+
+const arr20 = [
+    { name: 'apples', category: 'fruits', price: 10 },
+    { name: 'oranges', category: 'fruits', price: 30 },
+    { name: 'potatoes', category: 'vegetables', price: 20 }
+];
+
+
+function groupItem2(array) {
+    let res = array.reduce((groupedObj2, data) => {
+        if (groupedObj2[data.category]) {
+            groupedObj2[data.category].push(data);
+        } else {
+            groupedObj2[data.category] = [data];
+        }
+        return groupedObj2;
+    }, {})
+    return res;
+}
+
+console.log(groupItem2(arr20));
 
 
 
