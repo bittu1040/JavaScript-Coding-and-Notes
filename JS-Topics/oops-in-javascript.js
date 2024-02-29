@@ -109,6 +109,42 @@ console.log(car1.name)
 
 */
 
+// prototype based inheritance:
+function Person(name, age){
+    this.name=name;
+    this.age= age
+}
+
+Person.prototype.getDetails= function(){
+    return this.name+ " " + this.age;
+}
+
+function Student(name, age, major){
+    Person.call(this, name, age)
+    this.major= major;
+}
+
+Student.prototype= Object.create(Person.prototype);
+
+console.log(Student.prototype.constructor);  // Person
+// This should not point to Person, It should point to Student
+// So that the reason we reset the constructor property of Student.prototype
+
+Student.prototype.constructor= Student;
+
+console.log(Student.prototype.constructor)  // Student : now its point to Student
+
+Student.prototype.testMethod= function(){
+	return "test method"
+}
+
+let person1= new Person("suraj", 26);
+let student1= new Student("Bittu", 25, "CS");
+
+console.log(student1.getDetails()) // "Bittu 25"
+console.log(student1.major);       //  "CS" 
+
+
 
 
 // abstraction
