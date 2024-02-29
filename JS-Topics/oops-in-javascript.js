@@ -124,6 +124,7 @@ function Student(name, age, major){
     this.major= major;
 }
 
+//Student.prototype inherits from Person.prototype
 Student.prototype= Object.create(Person.prototype);
 
 console.log(Student.prototype.constructor);  // Person
