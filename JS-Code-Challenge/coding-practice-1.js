@@ -84,15 +84,15 @@ function ProductOfThree1(arr) {
 // output: [1,3,12, 0, 0]
 
 // way 1
-function moveZeroToLast(arr){
-    let newArr= []
-    for(let data of arr){
-        if(data!==0){
+function moveZeroToLast(arr) {
+    let newArr = []
+    for (let data of arr) {
+        if (data !== 0) {
             newArr.push(data)
         }
     }
-    diff= arr.length- newArr.length;
-    for(let i=0; i<diff; i++){
+    diff = arr.length - newArr.length;
+    for (let i = 0; i < diff; i++) {
         newArr.push(0)
     }
 
@@ -104,21 +104,21 @@ function moveZeroToLast(arr){
 
 
 // way 2
-function moveZeroToLast(arr){
-    let newArrWithZero= []
-    let newArrWithNotZero= []
+function moveZeroToLast(arr) {
+    let newArrWithZero = []
+    let newArrWithNotZero = []
 
-    for(let data of arr){
-        if(data!==0){
+    for (let data of arr) {
+        if (data !== 0) {
             newArrWithNotZero.push(data)
         }
-        else{
+        else {
             newArrWithZero.push(data)
         }
     }
 
 
-    return [...newArrWithNotZero, ...newArrWithZero ]
+    return [...newArrWithNotZero, ...newArrWithZero]
 }
 
 // console.log(moveZeroToLast([0,1,0,3,12]));
@@ -129,24 +129,24 @@ function moveZeroToLast(arr){
 // input: "A man, a plan, a canal: Panama"
 // output: true;
 
-function checkPalindrome(str){
-    let regex=  /[^A-Za-z0-9]/g ;
-    let str1= str.toLowerCase().replace(regex, "");
-    let str2= str1.split("").reverse().join("")
-    return str1===str2
+function checkPalindrome(str) {
+    let regex = /[^A-Za-z0-9]/g;
+    let str1 = str.toLowerCase().replace(regex, "");
+    let str2 = str1.split("").reverse().join("")
+    return str1 === str2
 }
 
-let str= "A man, a plan, a canal: Panama"
+let str = "A man, a plan, a canal: Panama"
 // console.log(checkPalindrome(str));
 
 
 // example for when we have plane sentence with space only, there we need to remove space and compare 
-function palindrome(str){
-    let removeSpace= /\s/g;
+function palindrome(str) {
+    let removeSpace = /\s/g;
 
-    let str1= str.toLowerCase().replace(removeSpace, "")
-    let str2= str1.split("").reverse().join("")
-    return str1===str2;
+    let str1 = str.toLowerCase().replace(removeSpace, "")
+    let str2 = str1.split("").reverse().join("")
+    return str1 === str2;
 }
 
 // console.log(palindrome("never odd or even"));
@@ -161,10 +161,10 @@ function palindrome(str){
 // output: 3
 
 // way 1
-function findTargetIndex(arr, target){
-    
-    for(let i=0; i<arr.length; i++){
-        if(arr[i]===target){
+function findTargetIndex(arr, target) {
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
             return i
         }
     }
@@ -172,20 +172,73 @@ function findTargetIndex(arr, target){
 }
 
 
-console.log(findTargetIndex([0,1,3,5,7,9,11,13], 0))
+// console.log(findTargetIndex([0,1,3,5,7,9,11,13], 0))
 
 
 
 // way 2
-function findTargetIndex1(arr, target){
-    if(arr.indexOf(target)>=0){
+function findTargetIndex1(arr, target) {
+    if (arr.indexOf(target) >= 0) {
         return arr.indexOf(target)
     }
     return -1
 }
 
 
-console.log(findTargetIndex1([0,1,3,5,7,9,11,13], 144))
+// console.log(findTargetIndex1([0,1,3,5,7,9,11,13], 144))
 
-let arr= [0,1,3,5,7,9,11,13];
-console.log(arr.indexOf(0))
+// let arr= [0,1,3,5,7,9,11,13];
+// console.log(arr.indexOf(0))
+
+
+
+// 6. write a function which return first non-repeating character, if not available then return -1
+
+// example:
+// input: "aabbcc"
+// output: -1
+
+// input: "aabbcd"
+// output: "c"
+
+function findFirstNonRepeatingCharacter(str) {
+    let data = {};
+    for (let i = 0; i < str.length; i++) {
+        if (data[str[i]]) {
+            data[str[i]] = data[str[i]] + 1
+        }
+        else {
+            data[str[i]] = 1
+        }
+    }
+    // return data  //  { a: 2, b: 5, c: 2, d: 1 }
+
+    for (let key in data) {
+        if (data[key] === 1) {
+            return key;
+        }
+    }
+    return -1
+}
+
+
+// console.log(findFirstNonRepeatingCharacter("aabbccdfh"))
+
+
+
+// 7. find occurance of characters in given string
+
+function findOccurance(str){
+    let result={};
+    for(let data of str){
+        if(result[data]){
+            result[data]=  result[data]+1;
+        }
+        else{
+            result[data]= 1
+        }
+    }
+    return result;
+}
+
+console.log(findOccurance("sdhjsbdcsdncjsdnjnddjsbhsvghsp"))
