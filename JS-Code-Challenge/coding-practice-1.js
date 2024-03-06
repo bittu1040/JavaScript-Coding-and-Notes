@@ -123,3 +123,69 @@ function moveZeroToLast(arr){
 
 // console.log(moveZeroToLast([0,1,0,3,12]));
 
+
+// 4. write a function to check palindrome, considering only alphanumeric characters and ignoring cases.
+
+// input: "A man, a plan, a canal: Panama"
+// output: true;
+
+function checkPalindrome(str){
+    let regex=  /[^A-Za-z0-9]/g ;
+    let str1= str.toLowerCase().replace(regex, "");
+    let str2= str1.split("").reverse().join("")
+    return str1===str2
+}
+
+let str= "A man, a plan, a canal: Panama"
+// console.log(checkPalindrome(str));
+
+
+// example for when we have plane sentence with space only, there we need to remove space and compare 
+function palindrome(str){
+    let removeSpace= /\s/g;
+
+    let str1= str.toLowerCase().replace(removeSpace, "")
+    let str2= str1.split("").reverse().join("")
+    return str1===str2;
+}
+
+// console.log(palindrome("never odd or even"));
+
+
+
+
+// 5. given a sorted array, and target value 
+// write a function to return the index of the target value in the array using binary search. if target not found- return -1
+
+// input: [1,3,5,7,9,11,13], target=7
+// output: 3
+
+// way 1
+function findTargetIndex(arr, target){
+    
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]===target){
+            return i
+        }
+    }
+    return -1;
+}
+
+
+console.log(findTargetIndex([0,1,3,5,7,9,11,13], 0))
+
+
+
+// way 2
+function findTargetIndex1(arr, target){
+    if(arr.indexOf(target)>=0){
+        return arr.indexOf(target)
+    }
+    return -1
+}
+
+
+console.log(findTargetIndex1([0,1,3,5,7,9,11,13], 144))
+
+let arr= [0,1,3,5,7,9,11,13];
+console.log(arr.indexOf(0))
