@@ -260,9 +260,26 @@ function flattenArray(arr) {
     return flattened;
 }
 
-console.log(flattenArray([1, 2, 3, [4, 5], 10]));
+// console.log(flattenArray([1, 2, 3, [4, 5], 10]));
+// output: [1, 2, 3, 4, 5, 10]
 
 
 const nestedArray = [1, 2, [3, 4, [5, 6]], 7, [8, [9]]];
 const flattenedArray = nestedArray.flat(Infinity);
-console.log(flattenedArray);
+// console.log(flattenedArray);
+// output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+// using reduce method
+
+function flattenArray1(arr) {
+    return arr.reduce(function(acc, curr) {
+        if (Array.isArray(curr)) {
+            return acc.concat(flattenArray1(curr));
+        } else {
+            return acc.concat(curr);
+        }
+    }, []);
+}
+
+console.log(flattenArray([1, 2, 3, [4, 5], 10]));
