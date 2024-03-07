@@ -228,17 +228,41 @@ function findFirstNonRepeatingCharacter(str) {
 
 // 7. find occurance of characters in given string
 
-function findOccurance(str){
-    let result={};
-    for(let data of str){
-        if(result[data]){
-            result[data]=  result[data]+1;
+function findOccurance(str) {
+    let result = {};
+    for (let data of str) {
+        if (result[data]) {
+            result[data] = result[data] + 1;
         }
-        else{
-            result[data]= 1
+        else {
+            result[data] = 1
         }
     }
     return result;
 }
 
-console.log(findOccurance("sdhjsbdcsdncjsdnjnddjsbhsvghsp"))
+// console.log(findOccurance("sdhjsbdcsdncjsdnjnddjsbhsvghsp"))
+
+
+// 8. Flatten a nested array
+function flattenArray(arr) {
+    const flattened = [];
+    arr.forEach((element) => {
+        if (Array.isArray(element)) {
+            let flattened1 = flattenArray(element)
+            flattened.push(...flattened1)
+        }
+        else {
+            flattened.push(element);
+        }
+    });
+
+    return flattened;
+}
+
+console.log(flattenArray([1, 2, 3, [4, 5], 10]));
+
+
+const nestedArray = [1, 2, [3, 4, [5, 6]], 7, [8, [9]]];
+const flattenedArray = nestedArray.flat(Infinity);
+console.log(flattenedArray);
