@@ -262,7 +262,7 @@ function groupItem2(array) {
     return res;
 }
 
-console.log(groupItem2(arr20));
+// console.log(groupItem2(arr20));
 
 
 
@@ -273,11 +273,67 @@ const inventory = [
     { name: "goat", type: "meat", quantity: 23 },
     { name: "cherries", type: "fruit", quantity: 5 },
     { name: "fish", type: "meat", quantity: 22 },
-  ];
+];
+
+// this works in latest node or in browser
+//   const result = Object.groupBy(inventory, ({ type }) => type);
+//   console.log(result)
 
 
-  const result = Object.groupBy(inventory, ({ type }) => type);
-
-  console.log(result)
 
 
+// question : 9
+
+// input
+const people = [
+    { id: 1, name: 'John', age: 25, city: 'New York' },
+    { id: 2, name: 'Alice', age: 30, city: 'Los Angeles' },
+    { id: 3, name: 'Bob', age: 25, city: 'New York' },
+    { id: 4, name: 'Charlie', age: 35, city: 'Chicago' },
+];
+
+// output
+
+//   {
+//     'New York': [
+//       { id: 1, name: 'John', age: 25, city: 'New York' },
+//       { id: 3, name: 'Bob', age: 25, city: 'New York' }
+//     ],
+//     'Los Angeles': [
+//       { id: 2, name: 'Alice', age: 30, city: 'Los Angeles' }
+//     ],
+//     'Chicago': [
+//       { id: 4, name: 'Charlie', age: 35, city: 'Chicago' }
+//     ]
+//   }
+
+
+
+function groupByCity(obj) {
+    let groupedDataByCity = {};
+    for (let data of obj) {
+        if (!groupedDataByCity[data.city]) {
+            groupedDataByCity[data.city] = []
+        }
+        groupedDataByCity[data.city].push(data);
+    }
+    return groupedDataByCity;
+}
+
+// console.log(groupByCity(people))
+
+
+
+
+// Question: 10  : grouping object data if keys are repeating/duplicate
+// inpit:  {a:1, b:2, a:3, b: 4};
+// outout: {a:[1,3], b: [2,4]}
+
+function objectGrouping(obj){
+    console.log(obj)
+    // solve this problem
+}
+
+const obj= {a:1, b:2, a:3, b: 4};
+
+console.log(objectGrouping(obj))
