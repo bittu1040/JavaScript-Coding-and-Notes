@@ -282,7 +282,31 @@ function flattenArray1(arr) {
     }, []);
 }
 
-console.log(flattenArray([1, 2, 3, [4, 5], 10]));
+// console.log(flattenArray([1, 2, 3, [4, 5], 10]));
 
 
 // 9. Find the longest word in a string
+
+function longestWord(str){
+    let str1= str.split(" ");
+    let str2= str1.sort((a,b)=>{
+       return b.length-a.length
+    });
+    let longestWord= str2.filter((data)=>{
+       return data.length== str2[0].length
+    })
+
+    return longestWord;
+}
+
+// console.log(longestWord("my name is bittu"));
+
+
+
+
+// native sorting of string by length
+// native sorting of number
+
+
+
+
