@@ -60,4 +60,16 @@ console.log(findMaxValue(obj))
 
 // 4. combine 2 and 3 -- find max character and its value
 
-// 5. 
+// 5. understand sorting problem 
+// string sorting
+// [ {name: "bittu", city:"blr"},{name: "rahul", city:"blr"},{name: "samay", city:"blr"} ]
+// sort by name
+
+
+
+// 6  slice and splice
+/*
+    slice : 
+    arr.slice()
+
+*/
