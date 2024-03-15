@@ -90,3 +90,17 @@ let arr3= [1,2,3,4,5,6]
 let arr4= arr3.splice(1,1,10,20)
 console.log(arr3)
 console.log(arr4)
+
+
+// 7. Create your own string method: repeatify(3)- input string will be repeated three times
+      // Ex- console.log("hello".repeatString(3)); // HelloHelloHello
+
+String.prototype.repeatString= function(times){
+    let str="";
+    for(let i=0; i<times; i++){
+        str= str+this;  // here this= "Hello"
+    }
+    return str;
+}
+console.log("Hello".repeatString(3))  // HelloHelloHello
+  
