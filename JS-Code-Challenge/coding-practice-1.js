@@ -308,5 +308,32 @@ function longestWord(str){
 // native sorting of number
 
 
+// 10. Compare two array
+//   input: [1,2,3,4,5], [1,2,3,4,5]
+//   output: true
+
+function compareArray(arr1, arr2){
+    if(arr1.length!==arr2.length){
+        return false;
+    }
+    return arr1.every((data, index, arr)=>{
+       return data==arr2[index];
+    })
+}
+
+console.log(compareArray([1,2,3,4,5], [1,2,3,4,5]));  // true
+console.log(compareArray([1,2,3,4,5,6], [1,2,3,4,5]));  // false
 
 
+
+// 11. write a function that accepts unlimited number of input and return sum of it.  
+
+function add(...arg){
+	let sum=0;
+  for(let i=0; i<arg.length;i++){
+  	sum= sum+arg[i]
+  }
+  return sum
+}
+
+console.log(add(1,2,3,4,5)) //15
