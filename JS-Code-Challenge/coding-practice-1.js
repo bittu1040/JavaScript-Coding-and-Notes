@@ -273,7 +273,7 @@ const flattenedArray = nestedArray.flat(Infinity);
 // using reduce method
 
 function flattenArray1(arr) {
-    return arr.reduce(function(acc, curr) {
+    return arr.reduce(function (acc, curr) {
         if (Array.isArray(curr)) {
             return acc.concat(flattenArray1(curr));
         } else {
@@ -287,13 +287,13 @@ function flattenArray1(arr) {
 
 // 9. Find the longest word in a string
 
-function longestWord(str){
-    let str1= str.split(" ");
-    let str2= str1.sort((a,b)=>{
-       return b.length-a.length
+function longestWord(str) {
+    let str1 = str.split(" ");
+    let str2 = str1.sort((a, b) => {
+        return b.length - a.length
     });
-    let longestWord= str2.filter((data)=>{
-       return data.length== str2[0].length
+    let longestWord = str2.filter((data) => {
+        return data.length == str2[0].length
     })
 
     return longestWord;
@@ -312,28 +312,61 @@ function longestWord(str){
 //   input: [1,2,3,4,5], [1,2,3,4,5]
 //   output: true
 
-function compareArray(arr1, arr2){
-    if(arr1.length!==arr2.length){
+function compareArray(arr1, arr2) {
+    if (arr1.length !== arr2.length) {
         return false;
     }
-    return arr1.every((data, index, arr)=>{
-       return data==arr2[index];
+    return arr1.every((data, index, arr) => {
+        return data == arr2[index];
     })
 }
 
-console.log(compareArray([1,2,3,4,5], [1,2,3,4,5]));  // true
-console.log(compareArray([1,2,3,4,5,6], [1,2,3,4,5]));  // false
+console.log(compareArray([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]));  // true
+console.log(compareArray([1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5]));  // false
 
 
 
 // 11. write a function that accepts unlimited number of input and return sum of it.  
 
-function add(...arg){
-	let sum=0;
-  for(let i=0; i<arg.length;i++){
-  	sum= sum+arg[i]
-  }
-  return sum
+function add(...arg) {
+    let sum = 0;
+    for (let i = 0; i < arg.length; i++) {
+        sum = sum + arg[i]
+    }
+    return sum
 }
 
-console.log(add(1,2,3,4,5)) //15
+console.log(add(1, 2, 3, 4, 5)) //15
+
+
+
+// 12. Write a program to remove duplicate element from an array in different ways.
+
+const numbers = [1, 3, 2, 3, 3, 4, 5];
+// 1
+function removeDuplicates(arr) {
+    let res = []
+    for (let i = 0; i < arr.length; i++) {
+        if (res.indexOf(arr[i]) == -1) {
+            res.push(arr[i])
+        }
+    }
+    return res;
+}
+console.log(removeDuplicates(numbers));
+
+// 2
+function removeDuplicate1(arr) {
+    return [...new Set(arr)]
+}
+console.log(removeDuplicate1(numbers));
+
+// 3
+function removeDuplicates2(arr) {
+    let obj = {};
+    for (let data of arr) {
+        obj[data] = true;
+    }
+    return Object.keys(obj).map(Number)
+}
+console.log(removeDuplicates2(numbers));
