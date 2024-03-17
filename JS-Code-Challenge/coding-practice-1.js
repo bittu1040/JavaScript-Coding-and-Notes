@@ -231,7 +231,7 @@ function findFirstNonRepeatingCharacter(str) {
 function findOccurance(str) {
     let result = {};
     for (let data of str) {
-        if (result[data]) {
+        if (result.hasOwnProperty(data)) {
             result[data] = result[data] + 1;
         }
         else {
@@ -242,6 +242,8 @@ function findOccurance(str) {
 }
 
 // console.log(findOccurance("sdhjsbdcsdncjsdnjnddjsbhsvghsp"))
+
+//{ s: 7, d: 6, h: 3, j: 4, b: 2, c: 2, n: 3, v: 1, g: 1, p: 1 }
 
 
 // 8. Flatten a nested array
@@ -370,3 +372,17 @@ function removeDuplicates2(arr) {
     return Object.keys(obj).map(Number)
 }
 console.log(removeDuplicates2(numbers));
+
+
+
+// 13. Write a program to implement currying which gives sum of three numbers.
+
+function SumOfThee(a){
+    return function(b){
+        return function(c){
+            return a+b+c;
+        }
+    }
+}
+
+console.log(SumOfThee(2)(3)(4))  // 9
