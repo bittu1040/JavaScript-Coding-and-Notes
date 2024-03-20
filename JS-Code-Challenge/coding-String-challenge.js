@@ -56,7 +56,7 @@ function findMaxValue(obj){
     }
 }
 
-console.log(findMaxValue(obj))
+// console.log(findMaxValue(obj))
 
 // 4. combine 2 and 3 -- find max character and its value
 
@@ -83,13 +83,13 @@ console.log(findMaxValue(obj))
 
 let arr1= [1,2,3,4,5];
 let arr2= arr1.slice(2,3)
-console.log(arr1)
-console.log(arr2)
+// console.log(arr1)
+// console.log(arr2)
 
 let arr3= [1,2,3,4,5,6]
 let arr4= arr3.splice(1,1,10,20)
-console.log(arr3)
-console.log(arr4)
+// console.log(arr3)
+// console.log(arr4)
 
 
 // 7. Create your own string method: repeatify(3)- input string will be repeated three times
@@ -102,5 +102,15 @@ String.prototype.repeatString= function(times){
     }
     return str;
 }
-console.log("Hello".repeatString(3))  // HelloHelloHello
+// console.log("Hello".repeatString(3))  // HelloHelloHello
   
+
+
+// 8. Write a program to mask card number 
+
+const cardNumber= "1234234534564567";
+const len= cardNumber.length;
+const last4= cardNumber.slice(len-4)
+const remaining= cardNumber.slice(0,len-4);
+const masked= "*".repeat(remaining.length)+ last4
+console.log(masked)   // ***************4567
