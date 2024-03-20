@@ -337,3 +337,31 @@ function objectGrouping(obj){
 const obj= {a:1, b:2, a:3, b: 4};
 
 console.log(objectGrouping(obj))
+
+
+// Question: 11 - write a program to sort by name in array of objects.
+const myArray = [{  name: 'John',age: 25,city: 'New York'},
+                {name: 'Alice', age: 30, city: 'London'},
+                { name: 'Bob',age: 22,city: 'Paris'}
+                ];
+
+const sortByAge = [...myArray].sort((a, b) => {
+  return a.age - b.age;
+});
+
+const sortByName = [...myArray].sort((a, b) => {
+  const nameA = a.name.toLowerCase();
+  const nameB = b.name.toLowerCase();
+  
+  if (nameA < nameB) {  return -1; }
+  if (nameA > nameB) {  return 1;  }
+  return 0;
+});
+
+const sortByName1 = [...myArray].sort((a, b) => {
+  return a.name.localeCompare(b.name);
+});
+
+// console.log(sortByAge);
+// console.log(sortByName);
+// console.log(sortByName1);
