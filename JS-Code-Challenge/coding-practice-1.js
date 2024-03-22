@@ -385,7 +385,7 @@ function SumOfThee(a){
     }
 }
 
-console.log(SumOfThee(2)(3)(4))  // 9
+// console.log(SumOfThee(2)(3)(4))  // 9
 
 
 // 14. Write a program to generate 6 digits random OTP 
@@ -398,7 +398,7 @@ function generateOTP(){
     return otp;
 }
 
-console.log(generateOTP()) // 232445
+// console.log(generateOTP()) // 232445
 
 
 // 15. Write a program to find intersection of two arrays.
@@ -420,5 +420,38 @@ function commonElementArray1(arr1, arr2) {
 }
 
 
-console.log(commonElementArray1([1,2,3,4,5], [3,4,5,6,7]));
+// console.log(commonElementArray1([1,2,3,4,5], [3,4,5,6,7]));
+
+
+// 16. Write a Javascript program for custom array method for max and min value.
+
+Array.prototype.customMax= function(){
+    if (this.length === 0) {
+        return undefined;
+    }
+    let max= this[0];
+    for(let num of this){
+        if(num>max){
+            max= num
+        }
+    }
+    return max
+}
+
+console.log([1,2,3,4,5].customMax()); // 5
+
+Array.prototype.customMin= function(){
+    if (this.length === 0) {
+        return undefined;
+    }
+    let min= this[0];
+    for(let num of this){
+        if(num<min){
+            min= num
+        }
+    }
+    return min
+}
+
+console.log([1,2,3,4,5].customMin()); // 1
 
