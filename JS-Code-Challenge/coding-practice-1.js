@@ -338,7 +338,7 @@ function add(...arg) {
     return sum
 }
 
-console.log(add(1, 2, 3, 4, 5)) //15
+// console.log(add(1, 2, 3, 4, 5)) //15
 
 
 
@@ -355,13 +355,13 @@ function removeDuplicates(arr) {
     }
     return res;
 }
-console.log(removeDuplicates(numbers));
+// console.log(removeDuplicates(numbers));
 
 // 2
 function removeDuplicate1(arr) {
     return [...new Set(arr)]
 }
-console.log(removeDuplicate1(numbers));
+// console.log(removeDuplicate1(numbers));
 
 // 3
 function removeDuplicates2(arr) {
@@ -371,7 +371,7 @@ function removeDuplicates2(arr) {
     }
     return Object.keys(obj).map(Number)
 }
-console.log(removeDuplicates2(numbers));
+// console.log(removeDuplicates2(numbers));
 
 
 
@@ -386,3 +386,39 @@ function SumOfThee(a){
 }
 
 console.log(SumOfThee(2)(3)(4))  // 9
+
+
+// 14. Write a program to generate 6 digits random OTP 
+
+function generateOTP(){
+    let otp="";
+    for(let i=0; i<6; i++){
+        otp= otp+ Math.floor(Math.random()*10);
+    }
+    return otp;
+}
+
+console.log(generateOTP()) // 232445
+
+
+// 15. Write a program to find intersection of two arrays.
+
+function commonElementArray(arr1, arr2){
+    let res=[];
+        for(let i=0; i<arr1.length; i++){
+            for(let j=0; j<arr2.length; j++){
+                if(arr1[i]===arr2[j]){
+                    res.push(arr1[i]);
+                }
+            }
+        }
+    return res;
+}
+
+function commonElementArray1(arr1, arr2) {
+    return arr1.filter(element => arr2.includes(element));
+}
+
+
+console.log(commonElementArray1([1,2,3,4,5], [3,4,5,6,7]));
+
