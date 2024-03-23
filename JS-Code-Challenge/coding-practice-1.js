@@ -438,7 +438,7 @@ Array.prototype.customMax= function(){
     return max
 }
 
-console.log([1,2,3,4,5].customMax()); // 5
+// console.log([1,2,3,4,5].customMax()); // 5
 
 Array.prototype.customMin= function(){
     if (this.length === 0) {
@@ -453,5 +453,20 @@ Array.prototype.customMin= function(){
     return min
 }
 
-console.log([1,2,3,4,5].customMin()); // 1
+// console.log([1,2,3,4,5].customMin()); // 1
+
+
+// 17 Write a JavaScript program to capitalize the first letter of each word of a given string.
+
+
+function capitalizeFirstLetter(str) {
+    let words= str.split(" ");
+    let res=[];
+    for(let i=0; i<words.length; i++){
+        res.push(words[i].charAt(0).toUpperCase() + words[i].slice(1));
+        
+    }
+    return res.join(" ");
+}
+// console.log(capitalizeFirstLetter("my name is Bittu Kumar"));
 
