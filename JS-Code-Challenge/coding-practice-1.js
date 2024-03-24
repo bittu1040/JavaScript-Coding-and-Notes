@@ -492,14 +492,49 @@ console.log(isAllcharactersUnique("Bittu")); // false
 
 // 19. Write a JavaScript function that checks the sum of all integers in array equals the highest integer in that array.
 
-function sumOfAllEqualHighest(arr) { 
-    let max= Math.max(...arr);
-    let totalsum= arr.reduce((a,b)=>{
-        return a+b;
-    },0);
+function sumOfAllEqualHighest(arr) {
+    let max = Math.max(...arr);
+    let totalsum = arr.reduce((a, b) => {
+        return a + b;
+    }, 0);
 
-    return (totalsum-max)=== max;
+    return (totalsum - max) === max;
 }
 
-console.log(sumOfAllEqualHighest([1,2,3,4,5]));      //  5!=10=> false
-console.log(sumOfAllEqualHighest([1,2,3,4,15,5]));  // 15==15=> true
+console.log(sumOfAllEqualHighest([1, 2, 3, 4, 5]));      //  5!=10=> false
+console.log(sumOfAllEqualHighest([1, 2, 3, 4, 15, 5]));  // 15==15=> true
+
+
+// 20. Write a JavaScript program to find unique object property values.
+
+let products = [
+    { title: "IPhone 8", company: "Apple" },
+    { title: "IPhone 11", company: "Apple" },
+    { title: "Galaxy", company: "Samsung" },
+    { title: "Vivo V5", company: "Vivo" },
+    { title: "OPPO C9", company: "Oppo" },
+    { title: "Lumia", company: "Nokia" },
+    { title: "S23 Ultra", company: "Samsung" },
+    { title: "Iphone 13", company: "Apple" },
+];
+
+function uniqueObjectValues(arr) {
+    let res = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (!res.includes(arr[i].company)) {
+            res.push(arr[i].company);
+        }
+    }
+    return res;
+}
+
+function uniqueObjectValues1(arr) {
+    return [... new Set(arr.map((data) => {
+        return data.company;
+    })
+    )]
+}
+
+console.log(uniqueObjectValues1(products));
+console.log(uniqueObjectValues(products));
+
