@@ -377,10 +377,10 @@ function removeDuplicates2(arr) {
 
 // 13. Write a program to implement currying which gives sum of three numbers.
 
-function SumOfThee(a){
-    return function(b){
-        return function(c){
-            return a+b+c;
+function SumOfThee(a) {
+    return function (b) {
+        return function (c) {
+            return a + b + c;
         }
     }
 }
@@ -390,10 +390,10 @@ function SumOfThee(a){
 
 // 14. Write a program to generate 6 digits random OTP 
 
-function generateOTP(){
-    let otp="";
-    for(let i=0; i<6; i++){
-        otp= otp+ Math.floor(Math.random()*10);
+function generateOTP() {
+    let otp = "";
+    for (let i = 0; i < 6; i++) {
+        otp = otp + Math.floor(Math.random() * 10);
     }
     return otp;
 }
@@ -403,15 +403,15 @@ function generateOTP(){
 
 // 15. Write a program to find intersection of two arrays.
 
-function commonElementArray(arr1, arr2){
-    let res=[];
-        for(let i=0; i<arr1.length; i++){
-            for(let j=0; j<arr2.length; j++){
-                if(arr1[i]===arr2[j]){
-                    res.push(arr1[i]);
-                }
+function commonElementArray(arr1, arr2) {
+    let res = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                res.push(arr1[i]);
             }
         }
+    }
     return res;
 }
 
@@ -425,14 +425,14 @@ function commonElementArray1(arr1, arr2) {
 
 // 16. Write a Javascript program for custom array method for max and min value.
 
-Array.prototype.customMax= function(){
+Array.prototype.customMax = function () {
     if (this.length === 0) {
         return undefined;
     }
-    let max= this[0];
-    for(let num of this){
-        if(num>max){
-            max= num
+    let max = this[0];
+    for (let num of this) {
+        if (num > max) {
+            max = num
         }
     }
     return max
@@ -440,14 +440,14 @@ Array.prototype.customMax= function(){
 
 // console.log([1,2,3,4,5].customMax()); // 5
 
-Array.prototype.customMin= function(){
+Array.prototype.customMin = function () {
     if (this.length === 0) {
         return undefined;
     }
-    let min= this[0];
-    for(let num of this){
-        if(num<min){
-            min= num
+    let min = this[0];
+    for (let num of this) {
+        if (num < min) {
+            min = num
         }
     }
     return min
@@ -460,13 +460,46 @@ Array.prototype.customMin= function(){
 
 
 function capitalizeFirstLetter(str) {
-    let words= str.split(" ");
-    let res=[];
-    for(let i=0; i<words.length; i++){
+    let words = str.split(" ");
+    let res = [];
+    for (let i = 0; i < words.length; i++) {
         res.push(words[i].charAt(0).toUpperCase() + words[i].slice(1));
-        
+
     }
     return res.join(" ");
 }
 // console.log(capitalizeFirstLetter("my name is Bittu Kumar"));
 
+
+// 18. Write a JavaScript program that determines whether a given string contains only unique characters or not.
+
+function isAllcharactersUnique(str) {
+    let data = []
+    for (let i = 0; i < str.length; i++) {
+        if (!data.includes(str[i])) {
+            data.push(str[i])
+        }
+        else {
+            return false
+        }
+    }
+    return true;
+}
+
+console.log(isAllcharactersUnique("Bitu"));  // true
+console.log(isAllcharactersUnique("Bittu")); // false
+
+
+// 19. Write a JavaScript function that checks the sum of all integers in array equals the highest integer in that array.
+
+function sumOfAllEqualHighest(arr) { 
+    let max= Math.max(...arr);
+    let totalsum= arr.reduce((a,b)=>{
+        return a+b;
+    },0);
+
+    return (totalsum-max)=== max;
+}
+
+console.log(sumOfAllEqualHighest([1,2,3,4,5]));      //  5!=10=> false
+console.log(sumOfAllEqualHighest([1,2,3,4,15,5]));  // 15==15=> true
