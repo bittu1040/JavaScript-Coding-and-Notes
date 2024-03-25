@@ -535,6 +535,35 @@ function uniqueObjectValues1(arr) {
     )]
 }
 
-console.log(uniqueObjectValues1(products));
-console.log(uniqueObjectValues(products));
+// console.log(uniqueObjectValues1(products));
+// console.log(uniqueObjectValues(products));
 
+
+
+// 21. Write a JavaScript program to return all objects with the maximum value from a given JavaScript object.
+
+
+
+let obj = { t: 4, h: 3, i: 4, s: 3, j: 1 };
+
+function findMaximumValue(obj) {
+    let res= {};
+    let maxValue= Math.max(...Object.values(obj));
+    for(let keys in obj){
+        if(obj[keys]===maxValue){
+            res[keys]=obj[keys];
+        }
+    }
+    return res;
+}
+
+console.log("value", findMaximumValue(obj));  // { t: 4, i: 4 }
+
+
+// 22. Write a JavaScript program to return the object with the maximum value (the first encountered) from a given JavaScript object
+
+function findMaximumValue1(obj) {
+
+}
+
+console.log(findMaximumValue1(obj));  // { t: 4}
