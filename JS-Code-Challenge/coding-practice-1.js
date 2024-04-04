@@ -567,3 +567,19 @@ function findMaximumValue1(obj) {
 }
 
 console.log(findMaximumValue1(obj));  // { t: 4}
+
+
+
+// 23. Write a JavaScript Program that takes an array of numbers and returns sum of all numbers that are divisible by both 3 and 5.
+
+function findSumDivisibleBy3_5(arr){
+    let sum= 0;
+    for(let i of arr ){
+        if(i%3===0 && i%5===0){
+            sum= sum+i;
+        }
+    }
+    return sum
+}
+
+console.log(findSumDivisibleBy3_5([10, 15, 9, 12, 30, 8, 25]))  // 45
