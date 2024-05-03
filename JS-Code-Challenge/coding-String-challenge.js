@@ -128,4 +128,22 @@ function countCharacter(str) {
     return charCount
 }
 
-console.log("cc",countCharacter("my name is bittu"));
+// console.log("cc",countCharacter("my name is bittu"));
+
+// 10. Write a JavaScript program to remove all occurrences of a specified character from a given string in JavaScript
+   function removeAllOccurance_1(str, char){
+       return str.split(char).join("");
+   }
+
+   function removeAllOccurance_2(str, char){
+    const regex = new RegExp(char, 'g');
+    return str.replace(regex, '');
+   }
+
+   console.log(removeAllOccurance_1("my name is bittu", "i"));
+   console.log(removeAllOccurance_2("my name is bittu", "i"));
+
+// 11. Write a JavaScript program to remove last occurance of a specified character from a given string in JavaScript.
+
+// 12. Write a JavaScript program to find first occurance of a specified character from a given string in JavaScript.
+
