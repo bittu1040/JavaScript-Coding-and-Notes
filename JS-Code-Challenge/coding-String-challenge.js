@@ -140,8 +140,8 @@ function countCharacter(str) {
     return str.replace(regex, '');
    }
 
-   console.log(removeAllOccurance_1("my name is bittu", "i"));
-   console.log(removeAllOccurance_2("my name is bittu", "i"));
+   console.log(removeAllOccurance_1("my name is bittu", "i"));  // my name s bttu
+   console.log(removeAllOccurance_2("my name is bittu", "i"));  // my name s bttu
 
 // 11. Write a JavaScript program to remove last occurance of a specified character from a given string in JavaScript.
 
