@@ -140,10 +140,30 @@ function countCharacter(str) {
     return str.replace(regex, '');
    }
 
-   console.log(removeAllOccurance_1("my name is bittu", "i"));  // my name s bttu
-   console.log(removeAllOccurance_2("my name is bittu", "i"));  // my name s bttu
+//    console.log(removeAllOccurance_1("my name is bittu", "i"));  // my name s bttu
+//    console.log(removeAllOccurance_2("my name is bittu", "i"));  // my name s bttu
+
 
 // 11. Write a JavaScript program to remove last occurance of a specified character from a given string in JavaScript.
 
 // 12. Write a JavaScript program to find first occurance of a specified character from a given string in JavaScript.
+
+// 13. Write a JavaScript program that takes two strings as input and returns true if they are anagrams of each other, otherwise return false.
+
+function checkAnagram(str1, str2) {
+    // Remove whitespace and convert to lowercase
+    const Str3 = str1.replace(/\s+/g, '').toLowerCase();
+    const Str4 = str2.replace(/\s+/g, '').toLowerCase();
+
+    if (Str3.length !== Str4.length){
+        return false;
+    }
+
+    const sortedStr1 = Str3.split('').sort().join('');
+    const sortedStr2 = Str4.split('').sort().join('');
+
+    return sortedStr1 === sortedStr2;
+}
+
+console.log(checkAnagram("abcd", "cdab" ));  // true
 
