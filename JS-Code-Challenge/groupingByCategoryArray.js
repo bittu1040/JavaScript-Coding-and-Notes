@@ -71,3 +71,7 @@ function groupItems2(arr) {
 }
 
 console.log(groupItems2(input));
+
+
+  const result = Object.groupBy(input, ({ key }) => key);
+  console.log(result)
