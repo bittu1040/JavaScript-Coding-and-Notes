@@ -593,3 +593,22 @@ function mergeSortedArray(arr1,arr2){
 }
 
 console.log(mergeSortedArray([1, 3, 5, 7], [2, 4, 6, 8]));   // [ 1, 2, 3, 4, 5, 6, 7, 8]
+
+// 25. Write a JavaScript program that takes two objects and returns a new object with properties that exist in both input objects.
+
+
+const obj1 = { a: 1, b: 2, c: 3 };
+const obj2 = { b: 2, c: 4, d: 5 };
+
+function findCommonProperty(obj1, obj2){
+    let commonProperty={};
+    for(let key in obj1){
+        if(obj2.hasOwnProperty(key)){
+            commonProperty[key]=obj1[key];
+        }
+    }
+    return commonProperty;
+}
+
+console.log(findCommonProperty(obj1, obj2));
+
