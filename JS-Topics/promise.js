@@ -176,7 +176,26 @@ const promise3 = new Promise((resolve, reject) => {
     setTimeout(() => resolve('Promise 3 resolved'), 3000);
 });
 
-Promise.allSettled([promise1, promise2, promise3])
-    .then((data) => {
-        console.log(data)
-    })
+// Promise.allSettled([promise1, promise2, promise3])
+//     .then((data) => {
+//         // console.log(data)
+//     })
+
+
+
+
+
+
+
+
+// Example: Implement a promise that resolves after 3 seconds
+
+const promise= new Promise((resolve, reject)=>{
+  setTimeout(() => {
+    resolve("resolved")
+  }, 3000);
+})
+
+promise.then((data)=>{
+  console.log(data)
+})
