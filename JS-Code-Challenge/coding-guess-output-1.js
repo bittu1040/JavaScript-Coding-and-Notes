@@ -62,8 +62,25 @@ var obj= {
     }
 };
 
-console.log(obj.prop.getFullName());  //  "Suraj"
+// console.log(obj.prop.getFullName());  //  "Suraj"
 
 const getName= obj.prop.getFullName;
-console.log(getName())   // Bittu
+// console.log(getName())   // Bittu
 
+// Q-8
+// How do you check if a key is available in an object in JavaScript ?
+
+// Way 1  : Using 'in' operator- 
+// It checks for property exists in an Object, including properties inherited from its prototype chain.
+let Object1= {name: "Bittu", age: 24};
+let Object2= Object.create(Object1);
+Object2.city="BLR";
+
+console.log("name" in Object1);  // true
+console.log("name" in Object2);  // true
+
+// Way 2: Using the hasOwnProperty() method
+//It checks if an object has a property with the specified name. It does not check properties inherited from its prototype chain.
+
+console.log(Object1.hasOwnProperty("name"));  // true
+console.log(Object2.hasOwnProperty("name"));  // false
