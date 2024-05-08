@@ -32,3 +32,11 @@ const data= [
 ]
 
 console.log(getPropertyFrequency(data))  // { a: 2, b: 3, c: 1 }
+
+// 2. How do you compare two Objects in JavaScript, ensuring that identical order of keys ?
+
+const obj1= {name: "Bittu", age: 24, Address: {city:"BLR", state: "Karnataka"}}
+const obj2= {name: "Bittu", age: 24, Address: {city:"BLR", state: "Karnataka"}}
+const obj3= {name: "Rahul", age: 25, Address: {city:"Ranchi", state: "Jharkhand"}}
+
+console.log(JSON.stringify(obj1)==JSON.stringify(obj2));
