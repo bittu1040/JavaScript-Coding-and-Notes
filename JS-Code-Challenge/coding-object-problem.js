@@ -80,5 +80,30 @@ const books = [
     return obj;
  }
 
- console.log(groupBooksByGenre(books))
+//  console.log(groupBooksByGenre(books))
     
+
+
+ // 5.  Collect books from array of objects and return collection of books as an array
+ let bookData =[
+    {name : 'raj', books : ['book1', 'book2'] },
+    {name : 'raj1', books : ['book3', 'book4'] },
+    {name : 'raj2', books : ['book5'] },
+    {name : 'raj3', books : ['book6', 'book7'] }
+]
+
+
+function bookList(bookData){
+    const arr=[];
+    for(let data of bookData){
+        arr.push(...data.books)
+    }
+    return arr
+}
+
+function bookList_1(bookData){
+    return bookData.map((data)=>data.books).flat(Infinity)
+}
+
+console.log(bookList(bookData));    // [ 'book1', 'book2', 'book3', 'book4', 'book5', 'book6', 'book7' ]
+console.log(bookList_1(bookData));  // [ 'book1', 'book2', 'book3', 'book4', 'book5', 'book6', 'book7' ]
