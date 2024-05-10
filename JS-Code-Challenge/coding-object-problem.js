@@ -55,3 +55,30 @@ function isAllValuesPresent(obj) {
 
 console.log(isAllValuesPresent({name: "Bittu", age: 24}));  // true
 console.log(isAllValuesPresent({name: "Bittu", age:'' }));  // false
+
+
+// 4. Group array of objects by property
+const books = [
+    { title: 'Book 1', author: 'Author A', genre: 'Fantasy' },
+    { title: 'Book 2', author: 'Author B', genre: 'Science Fiction' },
+    { title: 'Book 3', author: 'Author C', genre: 'Fantasy' },
+    { title: 'Book 4', author: 'Author D', genre: 'Science Fiction' },
+    { title: 'Book 5', author: 'Author E', genre: 'Mystery' }
+  ];
+  
+  
+ function groupBooksByGenre(books){
+    const obj= {}
+    books.forEach((book)=>{
+        if(!obj[book.genre]){
+            obj[book.genre]=[book];
+        }
+        else{
+        obj[book.genre].push(book);
+        }
+    })
+    return obj;
+ }
+
+ console.log(groupBooksByGenre(books))
+    
