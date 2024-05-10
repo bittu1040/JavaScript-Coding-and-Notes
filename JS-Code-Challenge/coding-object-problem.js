@@ -31,7 +31,7 @@ const data= [
     {a: 5, b: 6}
 ]
 
-console.log(getPropertyFrequency(data))  // { a: 2, b: 3, c: 1 }
+// console.log(getPropertyFrequency(data))  // { a: 2, b: 3, c: 1 }
 
 // 2. How do you compare two Objects in JavaScript, ensuring that identical order of keys ?
 
@@ -39,4 +39,19 @@ const obj1= {name: "Bittu", age: 24, Address: {city:"BLR", state: "Karnataka"}}
 const obj2= {name: "Bittu", age: 24, Address: {city:"BLR", state: "Karnataka"}}
 const obj3= {name: "Rahul", age: 25, Address: {city:"Ranchi", state: "Jharkhand"}}
 
-console.log(JSON.stringify(obj1)==JSON.stringify(obj2));
+// console.log(JSON.stringify(obj1)==JSON.stringify(obj2));
+
+// 3. How to check that all keys in given object must have corresponding non-empty values (truthy values)
+
+// This function will return false if any value is falsy (like null, undefined, 0, an empty string, etc.), and true otherwise.
+function isAllValuesPresent(obj) {
+    for (const key in obj) {
+        if(!obj[key]){
+            return false
+        }
+    }
+    return true;
+}
+
+console.log(isAllValuesPresent({name: "Bittu", age: 24}));  // true
+console.log(isAllValuesPresent({name: "Bittu", age:'' }));  // false
