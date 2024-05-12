@@ -121,8 +121,8 @@ console.log(masked)   // ***************4567
 function countCharacter(str) {
     let charCount = {};
     for (let s of str) {
-        if(s!==" ") {
-            charCount[s]= (charCount[s] || 0) + 1
+        if (s !== " ") {
+            charCount[s] = (charCount[s] || 0) + 1
         }
     }
     return charCount
@@ -131,14 +131,14 @@ function countCharacter(str) {
 // console.log("cc",countCharacter("my name is bittu"));
 
 // 10. Write a JavaScript program to remove all occurrences of a specified character from a given string in JavaScript
-   function removeAllOccurance_1(str, char){
-       return str.split(char).join("");
-   }
+function removeAllOccurance_1(str, char) {
+    return str.split(char).join("");
+}
 
-   function removeAllOccurance_2(str, char){
+function removeAllOccurance_2(str, char) {
     const regex = new RegExp(char, 'g');
     return str.replace(regex, '');
-   }
+}
 
 //    console.log(removeAllOccurance_1("my name is bittu", "i"));  // my name s bttu
 //    console.log(removeAllOccurance_2("my name is bittu", "i"));  // my name s bttu
@@ -155,7 +155,7 @@ function checkAnagram(str1, str2) {
     const Str3 = str1.replace(/\s+/g, '').toLowerCase();
     const Str4 = str2.replace(/\s+/g, '').toLowerCase();
 
-    if (Str3.length !== Str4.length){
+    if (Str3.length !== Str4.length) {
         return false;
     }
 
@@ -165,5 +165,28 @@ function checkAnagram(str1, str2) {
     return sortedStr1 === sortedStr2;
 }
 
-console.log(checkAnagram("abcd", "cdab" ));  // true
+console.log(checkAnagram("abcd", "cdab"));  // true
 
+// 14.  Write a JavaScript program that converts a string to camelCase
+function toCamelCase(str) {
+    if (!str) {
+        return '';
+    }
+    const words = str.split(' ');
+    words[0] = words[0].toLowerCase();
+
+    for (let i = 1; i < words.length; i++) {
+        let lowercaseWord = words[i].toLowerCase();
+        let camelCaseWord = lowercaseWord.charAt(0).toUpperCase() + lowercaseWord.slice(1);
+        words[i] = camelCaseWord;
+    }
+
+    return words.join('');
+}
+
+console.log(toCamelCase("hello world"));  // "helloWorld"
+console.log(toCamelCase("HELLO WORLD"));  // "helloWorld"
+console.log(toCamelCase("helloWorld"));   // "helloworld"
+console.log(toCamelCase("123camelCase")); // "123camelcase"
+console.log(toCamelCase("")); // Output: ""
+console.log(toCamelCase(null)); // Output: ""
