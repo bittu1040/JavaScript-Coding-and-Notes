@@ -28,3 +28,12 @@ console.log(myName2)  // Bittu
 
 let test;
 console.log(test??"tetette")
+
+// 6. 
+const count= {};
+count["example"]=  1;
+console.log(count); //{ example: 1 }
+
+count["example"]= (count["example"] || 0)  + 1;
+count["another"]= (count["another"] || 0) + 1;
+console.log(count); // { example: 2, another: 1 }
