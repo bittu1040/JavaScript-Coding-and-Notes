@@ -365,3 +365,50 @@ const sortByName1 = [...myArray].sort((a, b) => {
 // console.log(sortByAge);
 // console.log(sortByName);
 // console.log(sortByName1);
+
+
+
+
+// Question 12- Calculate the Total Value of Cars by Brand
+// input
+const cars = [
+    { id: 1, brand: "Toyota", model: "Camry", price: 24000 },
+    { id: 2, brand: "Honda", model: "Civic", price: 22000 },
+    { id: 3, brand: "Toyota", model: "Corolla", price: 20000 },
+    { id: 4, brand: "Honda", model: "Accord", price: 26000 },
+    { id: 5, brand: "Ford", model: "Mustang", price: 30000 },
+    { id: 6, brand: "Ford", model: "Focus", price: 19000 }
+  ];
+
+// output: 
+          /*
+                [{
+                    brand: "Toyota",
+                    totalValue: 44000
+                }, {
+                    brand: "Honda",
+                    totalValue: 48000
+                }, {
+                    brand: "Ford",
+                    totalValue: 49000
+                }]
+          */ 
+
+ function calculateValueByBrand(cars) {
+   const brands = {};
+   for (const car of cars) {
+     if (!brands[car.brand]) {
+       brands[car.brand] = 0;
+     }
+     brands[car.brand] += car.price;
+   }
+   console.log(brands); // { Ford: 49000,Honda: 48000,Toyota: 44000 }
+
+   const result = [];
+   for (const brand in brands) {
+     result.push({ brand: brand, totalValue: brands[brand] });
+   }
+   return result;
+ }
+
+ console.log(calculateValueByBrand(cars));
