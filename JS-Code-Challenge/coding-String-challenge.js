@@ -22,11 +22,7 @@ function findNumberOfChar(str) {
     for (let i = 0; i < str1.length; i++) {
         let char = str1[i];
         if (char !== ' ') {
-            if (charCount[char]) {
-                charCount[char]++;
-            } else {
-                charCount[char] = 1;
-            }
+                charCount[char] = charCount[char]+1 || 1;
         }
     }
     return charCount;
