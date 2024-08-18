@@ -412,3 +412,21 @@ const cars = [
  }
 
  console.log(calculateValueByBrand(cars));
+
+/**
+ * Using Maps 
+ */
+
+function calculateValueByBrand(cars) {
+    const resultMap = new Map()
+
+    cars.forEach(v=>{
+        if(resultMap.has(v.brand)){
+            resultMap.set(v.brand,resultMap.get(v.brand)+v.price)
+        }else{
+            resultMap.set(v.brand,v.price)
+        }
+    })
+    return resultMap;
+  }
+  console.log(calculateValueByBrand(cars));
