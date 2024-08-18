@@ -161,8 +161,25 @@ function checkAnagram(str1, str2) {
     return sortedStr1 === sortedStr2;
 }
 
-console.log(checkAnagram("abcd", "cdab"));  // true
+//Alternative way without using inbuilt methods
+function checkAnagram2(str1, str2){
+    if(str1.length !== str2.length) return false;
+    let obj = {};
+    for(let s of str1){
+        obj[s]=obj[s]+1 || 1;
+    }
+    for(let s of str2){
+       if(!obj[s])return false;
+       obj[s] =  obj[s] -1;
+        if (0 > obj[s]){
+            return false
+        }
+    }
+    return true;
+}
 
+console.log(checkAnagram("abcd", "cdab"));  // true
+console.log(checkAnagram2("abcd", "cdab"));  // true
 // 14.  Write a JavaScript program that converts a string to camelCase
 function toCamelCase(str) {
     if (!str) {
