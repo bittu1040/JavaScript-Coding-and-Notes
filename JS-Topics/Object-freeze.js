@@ -9,6 +9,17 @@
 // 2. Cant delete existing properties
 // 3. Cant modify existing properties
 
+
+// Object seal 
+// Makes an object partially immutable.
+// no addition or deletion of properties is allowed.
+// only modifications are allowed.
+
+
+// freeze is completely immutable and seal is partially immutable
+
+
+// Object freeze
 let obj= {name: "Bittu", age: 24};
 
 Object.freeze(obj);
@@ -27,3 +38,19 @@ console.log(obj.age); // 24
 
 // check if object is freezed
 console.log(Object.isFrozen(obj));  // true
+
+
+
+// Object seal
+let obj1= {name: "Bittu", age: 24};
+
+Object.seal(obj1);
+
+obj1.name= "Suraj";
+console.log(obj1.name);  // Suraj
+
+obj1.city= "BLR";
+console.log(obj1.city);  // undefined due to addition of new property not allowed. 
+
+delete obj1.age;
+console.log(obj1.age);  // 24  due to deletion of existing property- no effect
