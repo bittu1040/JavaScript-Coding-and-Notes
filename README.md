@@ -28,7 +28,7 @@ The merged output should be:
 { a: 1, b: 2, c: 4, d: 5 }
 ```
 
-## Solution
+#### Solution
 
 ##### Way 1: Using a `for...in` Loop
 
@@ -53,4 +53,55 @@ function mergeObjects1(obj1, obj2) {
 
 const mergedResult2 = mergeObjects1(obj1, obj2);
 console.log(mergedResult2); // Output: { a: 1, b: 2, c: 4, d: 5 }
+```
+
+
+
+### 2. Transform Array of Objects in JavaScript
+
+Convert an array of objects, where each object contains an `id` and `name` property, into an object where each key is an `id` from the original array, and the corresponding value is an object with the `name` property.
+
+#### Example
+
+**Input**
+
+```javascript
+let arr1 = [{ id: 1, name: 'A' }, { id: 2, name: 'B' }];
+```
+
+**Output**
+
+```javascript
+{ 1: { name: 'A' }, 2: { name: 'B' } }
+```
+
+#### Solution
+
+##### Way 1: Using a `for...of` Loop
+
+```javascript
+function transformArrayOfObject(arr) {
+    let obj = {};
+    for (const element of arr) {
+        obj[element.id] = { name: element.name };
+    }
+    return obj;
+}
+
+console.log(transformArrayOfObject(arr1)); 
+// Output: { 1: { name: 'A' }, 2: { name: 'B' } }
+```
+
+##### Way 2: Using `Array.prototype.reduce`
+
+```javascript
+function transformArrayOfObject1(arr) {
+    return arr.reduce((acc, item) => {
+        acc[item.id] = { name: item.name };
+        return acc;
+    }, {});
+}
+
+console.log(transformArrayOfObject1(arr1)); 
+// Output: { 1: { name: 'A' }, 2: { name: 'B' }
 ```
