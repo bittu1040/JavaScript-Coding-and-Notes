@@ -115,4 +115,30 @@ function arrayMap(arr){
         return data*data;
     })
 }
-console.log(arrayMap(arr3));
+// console.log(arrayMap(arr3));
+
+
+// 5. Group by Property: 
+/*
+   Given an array of objects, group them by a specified property.
+   Example: Group students by city, so 
+   [{name: 'A', age: 20, city: 'BLR'}, {name: 'B', age: 20, city: 'DEL'}, {name: 'C', age: 21, city: 'BLR'}] 
+   
+   becomes 
+   { "BLR": [{name: 'A', age: 20}, {name: 'C', age: 21}], "DEL": [{name: 'B', age: 20}] }.
+
+*/
+
+let arr4=  [{name: 'A', age: 20, city: 'BLR'}, {name: 'B', age: 20, city: 'DEL'}, {name: 'C', age: 21, city: 'BLR'}] ;
+
+function groupByCategory(arr, property){
+    return arr.reduce((acc, item)=>{
+        if(!acc[item[property]]){
+            acc[item[property]]=[];
+        }
+        acc[item[property]].push(item)
+        return acc;
+    }, {})
+}
+
+console.log(groupByCategory(arr4, 'city'));
