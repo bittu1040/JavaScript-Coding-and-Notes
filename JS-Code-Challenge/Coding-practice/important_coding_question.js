@@ -20,7 +20,7 @@ function mergeObjects(obj1, obj2) {
 
 // way 2
 function mergeObjects1(obj1, obj2) {
-    return {...obj1, ...obj2}
+    return { ...obj1, ...obj2 }
 }
 
 // console.log(mergeObjects1(obj1, obj2));
@@ -45,13 +45,13 @@ function mergeObjects3(obj1, obj2) {
      Example: Convert [{ id: 1, name: 'A' }, { id: 2, name: 'B' }] into { 1: { name: 'A' }, 2: { name: 'B' } }
 */
 
-let arr1= [{ id: 1, name: 'A' }, { id: 2, name: 'B' }];
+let arr1 = [{ id: 1, name: 'A' }, { id: 2, name: 'B' }];
 
 // way 1
-function transformArrayOfObject(arr){
-    let obj={}
+function transformArrayOfObject(arr) {
+    let obj = {}
     for (const element of arr) {
-        obj[element.id]= {name:element.name}
+        obj[element.id] = { name: element.name }
     }
     return obj;
 }
@@ -60,9 +60,9 @@ function transformArrayOfObject(arr){
 
 // way 2 using reduce 
 
-function transformArrayOfObject1(arr){
-    return arr.reduce((acc,item)=>{
-        acc[item.id]= {name: item.name}
+function transformArrayOfObject1(arr) {
+    return arr.reduce((acc, item) => {
+        acc[item.id] = { name: item.name }
         return acc;
     }, {})
 }
@@ -71,6 +71,34 @@ function transformArrayOfObject1(arr){
 
 
 
-// 3. 
+// 3 Convert Array of Strings to Object Format: 
+/*
+    Given an array of strings like ["apple", "banana", "cherry"], 
+    convert it into an object where each element is a key with a default value.
+    Example: { "apple": 0, "banana": 0, "cherry": 0 }
+*/
+
+let arr2 = ["apple", "banana", "cherry"];
+
+// way 1
+function arrayToObject(arr) {
+    let res = {}
+    for (const element of arr) {
+        res[element] = 0
+    }
+    return res;
+}
+
+// console.log(arrayToObject(arr2));
 
 
+// way 2
+
+function arrayToObject1(arr) {
+    return arr.reduce((acc, item) => {
+        acc[item] = 0
+        return acc;
+    }, {})
+}
+
+// console.log(arrayToObject1(arr2));
