@@ -102,3 +102,17 @@ function arrayToObject1(arr) {
 }
 
 // console.log(arrayToObject1(arr2));
+
+
+// 4. Array Mapping: 
+/*
+    Write a function to take an array of numbers and return an array of squared values.
+*/
+
+let arr3= [1,2,3,4,5];
+function arrayMap(arr){
+    return arr.map((data)=>{
+        return data*data;
+    })
+}
+console.log(arrayMap(arr3));
