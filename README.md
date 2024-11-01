@@ -55,6 +55,17 @@ const mergedResult2 = mergeObjects1(obj1, obj2);
 console.log(mergedResult2); // Output: { a: 1, b: 2, c: 4, d: 5 }
 ```
 
+##### Way 3: Using the Object.assign
+
+```javascript
+function mergeObjects3(obj1, obj2) {
+    return Object.assign({}, obj1, obj2)
+}
+
+// console.log(mergeObjects3(obj1, obj2));  // Output: { a: 1, b: 2, c: 4, d: 5 }
+```
+
+
 
 
 ### 2. Transform Array of Objects in JavaScript
@@ -157,3 +168,35 @@ console.log(arrayToObject1(arr2));
 // Output: { "apple": 0, "banana": 0, "cherry": 0 }
 ```
 
+### 4. Array Mapping
+
+ Write a function to take an array of numbers and return an array of `squared` values..
+
+#### Example
+
+**Input**
+
+```javascript
+let arr3= [1,2,3,4,5];
+```
+
+**Output**
+
+```javascript
+[ 1, 4, 9, 16, 25 ]
+```
+
+#### Solution
+
+
+
+```javascript
+function arrayMap(arr) {
+    return arr.map((data) => {
+        return data * data;
+    });
+}
+
+console.log(arrayMap(arr3)); 
+// Output: [1, 4, 9, 16, 25]
+```
