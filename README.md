@@ -105,3 +105,55 @@ function transformArrayOfObject1(arr) {
 console.log(transformArrayOfObject1(arr1)); 
 // Output: { 1: { name: 'A' }, 2: { name: 'B' }
 ```
+
+
+
+### 3. Convert Array of Strings to Object Format in JavaScript
+
+Convert an array of strings, such as `["apple", "banana", "cherry"]`, into an object where each string becomes a key, and each key has a default value of `0`.
+
+#### Example
+
+**Input**
+
+```javascript
+let arr2 = ["apple", "banana", "cherry"];
+```
+
+**Output**
+
+```javascript
+{ "apple": 0, "banana": 0, "cherry": 0 }
+```
+
+#### Solution
+
+##### Way 1: Using a `for...of` Loop
+
+```javascript
+function arrayToObject(arr) {
+    let res = {};
+    for (const element of arr) {
+        res[element] = 0;
+    }
+    return res;
+}
+
+console.log(arrayToObject(arr2)); 
+// Output: { "apple": 0, "banana": 0, "cherry": 0 }
+```
+
+##### Way 2: Using `Array.prototype.reduce`
+
+```javascript
+function arrayToObject1(arr) {
+    return arr.reduce((acc, item) => {
+        acc[item] = 0;
+        return acc;
+    }, {});
+}
+
+console.log(arrayToObject1(arr2)); 
+// Output: { "apple": 0, "banana": 0, "cherry": 0 }
+```
+
