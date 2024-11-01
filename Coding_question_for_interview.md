@@ -66,7 +66,7 @@ function mergeObjects3(obj1, obj2) {
 ```
 
 
-
+...
 
 ### 2. Transform Array of Objects in JavaScript
 
@@ -118,6 +118,7 @@ console.log(transformArrayOfObject1(arr1));
 ```
 
 
+...
 
 ### 3. Convert Array of Strings to Object Format in JavaScript
 
@@ -168,6 +169,8 @@ console.log(arrayToObject1(arr2));
 // Output: { "apple": 0, "banana": 0, "cherry": 0 }
 ```
 
+...
+
 ### 4. Array Mapping
 
  Write a function to take an array of numbers and return an array of `squared` values..
@@ -200,6 +203,8 @@ function arrayMap(arr) {
 console.log(arrayMap(arr3)); 
 // Output: [1, 4, 9, 16, 25]
 ```
+
+...
 
 ### 5. Group by Property in JavaScript
 
