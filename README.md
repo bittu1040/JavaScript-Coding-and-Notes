@@ -200,3 +200,47 @@ function arrayMap(arr) {
 console.log(arrayMap(arr3)); 
 // Output: [1, 4, 9, 16, 25]
 ```
+
+### 5. Group by Property in JavaScript
+
+Given an array of students, group them by their city.
+
+#### Example
+
+**Input**
+
+```javascript
+let arr4 = [
+    { name: 'A', age: 20, city: 'BLR' },
+    { name: 'B', age: 20, city: 'DEL' },
+    { name: 'C', age: 21, city: 'BLR' }
+];
+```
+
+**Output**
+
+```javascript
+{
+    "BLR": [{ name: 'A', age: 20 }, { name: 'C', age: 21 }],
+    "DEL": [{ name: 'B', age: 20 }]
+}
+```
+
+#### Solution
+
+
+
+```javascript
+function groupByCategory(arr, property) {
+    return arr.reduce((acc, item) => {
+        if (!acc[item[property]]) {
+            acc[item[property]] = [];
+        }
+        acc[item[property]].push({ name: item.name, age: item.age });
+        return acc;
+    }, {});
+}
+
+console.log(groupByCategory(arr4, 'city')); 
+// Output: { "BLR": [{ name: 'A', age: 20 }, { name: 'C', age: 21 }], "DEL": [{ name: 'B', age: 20 }] }
+```
