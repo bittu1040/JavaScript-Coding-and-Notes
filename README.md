@@ -55,6 +55,17 @@ const mergedResult2 = mergeObjects1(obj1, obj2);
 console.log(mergedResult2); // Output: { a: 1, b: 2, c: 4, d: 5 }
 ```
 
+##### Way 3: Using the Object.assign
+
+```javascript
+function mergeObjects3(obj1, obj2) {
+    return Object.assign({}, obj1, obj2)
+}
+
+// console.log(mergeObjects3(obj1, obj2));  // Output: { a: 1, b: 2, c: 4, d: 5 }
+```
+
+
 
 
 ### 2. Transform Array of Objects in JavaScript
