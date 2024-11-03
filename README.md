@@ -10,8 +10,28 @@ This section covers fundamental JavaScript concepts, refer this link:
   * Class
   * Closure
   * Currying
-  * Arrays
-  * Objects
+  * ES6 practice and notes
+  * Hoisting
+  * IsNaN and NaN
+  * OOPS practice
+  * Object freeze and seal
+  * Prototypal inheritance
+  * Arrow and regular function
+  * Promise and async-await
+  * break and return difference
+  * call, apply and bind
+  * Debounce and throttle
+  * Deep copy and shallow copy
+  * Event delegation
+  * Memoization
+  * Null and undefined
+  * Pure and impure function
+  * This keyword in JavaScript
+  * Scope chain and lexical environment
+  * SetInterval and SetTimeout example
+  * Slice and splice methods
+  * Arrays manipulation and methods
+  * Objects manipulation and methods
 
 **2. JS Code Challenges**
 This section contains a collection of JavaScript coding challenges to test your skills. Each challenge comes with a clear problem statement and solution
