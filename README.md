@@ -1,3 +1,4 @@
+##
 # JavaScript Learning Repository
 
 This repository is designed to help you learn and practice JavaScript. It's divided into two main sections:
