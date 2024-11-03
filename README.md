@@ -11,15 +11,17 @@ This section contains a collection of JavaScript coding challenges to test your 
 
 "[JS Code challenge](https://github.com/bittu1040/JavaScript-Coding-and-Notes/tree/master/JS-Code-Challenge)"
 
+##
 
 
+I have recenty started adding list of coding question here which I was asked in my recent interviews.
 
-I have recenty started adding list of coding question here 
+"[Coding Question for Interview](Coding_question_for_interview.md)"  
 
-We've also included a separate file named "[Coding Question for Interview](Coding_question_for_interview.md)" that you can use to focus on a specific coding challenge. 
+##
+**Contribute and Grow Together!**
 
-**Tip:** Refer to this file regularly to test and improve your understanding of key JavaScript concepts.
+We're passionate about building a strong community of JavaScript learners! Feel free to contribute to this repository. If you spot an error, have ideas for improvement, or want to share your own coding challenges, open a pull request!
 
-Contributing
-We welcome contributions to this repository! If you find any errors or have suggestions for improvement, please feel free to open a pull request.   
+**Happy Learning!**  
 
