@@ -6,6 +6,13 @@ This repository is designed to help you learn and practice JavaScript. It's divi
 This section covers fundamental JavaScript concepts, refer this link:
 "[JS Topics](https://github.com/bittu1040/JavaScript-Coding-and-Notes/tree/master/JS-Topics)"
 
+  * 4 ways to create objects
+  * Class
+  * Closure
+  * Currying
+  * Arrays
+  * Objects
+
 **2. JS Code Challenges**
 This section contains a collection of JavaScript coding challenges to test your skills. Each challenge comes with a clear problem statement and solution
 
