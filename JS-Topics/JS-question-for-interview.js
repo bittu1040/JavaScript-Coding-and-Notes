@@ -93,3 +93,50 @@ function test1(){
 
 test1();
 */
+
+
+
+
+
+/*  Example  explaining many things together about this keyword, arrow function, normal function, call )
+var age = 20;
+
+var person = {
+    age: 25,
+    city: "Blr",
+    displayAge: function() {
+        console.log(this);
+        console.log("age:", this.age);
+        console.log("city:", this.city);
+    },
+    nestedObject: {
+        age: 40,
+        city: "Pune",
+        displayAge: function() {
+            console.log(this);
+            console.log("age:", this.age);
+            console.log("city:", this.city);
+        }
+    },
+    arrowMethod: {
+        age: 50,
+        city: "Mumbai",
+        displayAge: () => {
+            console.log(this);  // arrow functions do not have their own `this`
+            console.log("age:", this.age);  // this.age here refers to the global scope `age`
+        }
+    }
+}
+
+person.displayAge(); 
+person.nestedObject.displayAge(); 
+person.arrowMethod.displayAge(); 
+
+var anotherPerson = { age: 30, city: "Delhi" };
+
+person.displayAge.call(anotherPerson);  // `this` refers to anotherPerson
+
+// Using call with an arrow function has no effect since arrow functions do not bind `this`
+person.arrowMethod.displayAge.call(anotherPerson);  // `this` is still the global scope due to arrow function
+
+*/
