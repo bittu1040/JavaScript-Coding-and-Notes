@@ -44,7 +44,8 @@ This section contains a collection of JavaScript coding challenges to test your 
 
 I have recenty started adding list of coding question here which I was asked in my recent interviews.
 
-"[Coding Question for Interview](Coding_question_for_interview.md)"  
+"[Get Coding Question for Interview here ](Coding_questions_for_practice.md)"  </br>
+"[Get Coding Question and solution for Interview here](Coding_question_and_solution.md)" 
 
 ##
 **Contribute and Grow Together!**
