@@ -249,3 +249,40 @@ function groupByCategory(arr, property) {
 console.log(groupByCategory(arr4, 'city')); 
 // Output: { "BLR": [{ name: 'A', age: 20 }, { name: 'C', age: 21 }], "DEL": [{ name: 'B', age: 20 }] }
 ```
+
+### 6.  Find Duplicates in Array
+
+Write a function to identify duplicates in an array and return them as a new array.
+
+#### Example
+
+**Input**
+
+```javascript
+let arr5= [1,2,3,1,3,4,2,5];
+```
+
+**Output**
+
+```javascript
+[ 1, 2, 3 ]
+```
+
+#### Solution
+
+
+
+```javascript
+function findDuplicate(arr){
+    let res=[];
+    for(let i=0; i<arr.length; i++){
+        for(let j=i+1; j<arr.length; j++){
+            if(arr[i]===arr[j]){
+                res.push(arr[i]);
+            }
+        }
+    }
+    return res;
+}
+console.log( findDuplicate(arr5));
+```
