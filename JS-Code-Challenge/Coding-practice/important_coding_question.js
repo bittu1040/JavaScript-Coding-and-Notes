@@ -161,4 +161,22 @@ function findDuplicate(arr){
     }
     return res;
 }
-console.log( findDuplicate(arr5));
+// console.log( findDuplicate(arr5));
+
+
+let arr6= [1,2,3,1,3,4,2,5];
+function findDuplicate1(arr){
+    let res= {}
+    arr.forEach(element => {
+        if(!res[element]){
+            res[element]= 1;
+        }
+        else{
+            res[element]= res[element]+1;
+        }
+    });
+
+    return res;
+}
+
+console.log(findDuplicate1(arr6));
