@@ -270,8 +270,7 @@ let arr5= [1,2,3,1,3,4,2,5];
 
 #### Solution
 
-
-
+##### Way 1: Using `two for loop` Loop
 ```javascript
 function findDuplicate(arr){
     let res=[];
@@ -286,3 +285,22 @@ function findDuplicate(arr){
 }
 console.log( findDuplicate(arr5));
 ```
+
+
+##### Way 2: Using `hashmap with object`
+```javascript
+function findDuplicate1(arr){
+    let res= {}
+    arr.forEach(element => {
+        if(!res[element]){
+            res[element]= 1;
+        }
+        else{
+            res[element]= res[element]+1;
+        }
+    });
+
+    return res;
+}
+```
+
