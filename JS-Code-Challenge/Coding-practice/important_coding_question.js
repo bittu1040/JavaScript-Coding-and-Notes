@@ -165,18 +165,21 @@ function findDuplicate(arr){
 
 
 let arr6= [1,2,3,1,3,4,2,5];
-function findDuplicate1(arr){
-    let res= {}
+function findDuplicate1(arr) {
+    let res = {};
+    let duplicates = [];
+
     arr.forEach(element => {
-        if(!res[element]){
-            res[element]= 1;
-        }
-        else{
-            res[element]= res[element]+1;
-        }
+        res[element] = (res[element] || 0) + 1;
     });
 
-    return res;
+    for (let key in res) {
+        if (res[key] > 1) {
+            duplicates.push(Number(key));
+        }
+    }
+
+    return duplicates;
 }
 
-console.log(findDuplicate1(arr6));
+// console.log(findDuplicate1(arr6));
