@@ -304,3 +304,41 @@ function findDuplicate1(arr){
 }
 ```
 
+
+### 7 Count Frequency of Elements
+
+Write a function to count the frequency of each element in an array and return an object where:
+
+#### Example
+
+**Input**
+```javascript
+let arr = [1, 2, 2, 3, 3, 3, 4];
+```
+
+**Output**
+```javascript
+{ '1': 1, '2': 2, '3': 3, '4': 1 }
+```
+
+#### Solution
+
+##### Way 1: Using `HashMap`
+
+```javascript
+function countFrequency(arr) {
+    let frequencyMap = {};
+    for (let element of arr) {
+        if (frequencyMap[element]) {
+            frequencyMap[element]++;
+        } else {
+            frequencyMap[element] = 1;
+        }
+    }
+    return frequencyMap;
+}
+
+let arr = [1, 2, 2, 3, 3, 3, 4];
+console.log(countFrequency(arr)); 
+```
+
