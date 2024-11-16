@@ -305,9 +305,9 @@ function findDuplicate1(arr){
 ```
 
 
-### 7 Count Frequency of Elements
+### 7. Count Frequency of Elements
 
-Write a function to count the frequency of each element in an array and return an object where:
+Write a function to count the frequency of each element in an array and return an object:
 
 #### Example
 
@@ -341,4 +341,37 @@ function countFrequency(arr) {
 let arr = [1, 2, 2, 3, 3, 3, 4];
 console.log(countFrequency(arr)); 
 ```
+
+### 8. Longest String in Array
+
+Write a function to find and return the first occurrence of the longest string in an array of strings.
+
+#### Example
+
+**Input**
+```javascript
+const strings = ["apple", "banana", "cherry", "orange", "grape"];
+```
+
+**Output**
+```javascript
+"banana"
+```
+
+#### Solution
+
+##### Way 1:
+
+```javascript
+function findFirstLongestStr(arr) {
+  let longest = ""; 
+  for (let data of arr) {
+    if (data.length > longest.length) {
+      longest = data;
+    }
+  }
+  return longest;
+}
+```
+
 
