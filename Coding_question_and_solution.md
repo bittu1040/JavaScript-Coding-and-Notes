@@ -373,5 +373,18 @@ function findFirstLongestStr(arr) {
   return longest;
 }
 ```
+##### Way 2:
+```javascript
+function findLongestStr(arr){
+	return arr.reduce((acc, data)=>{
+  	if(data.length>acc.length){
+    	return data;
+    }
+    else{
+    	return acc;
+    }
+  }, "")
+}
+```
 
 
