@@ -3,6 +3,8 @@
 You must have come across what to practice and what not when you are starting your coding career. I will be always working on this to improvement of this page by adding different types of questions.   <br />  <br />
 This document covers various coding challenges and tips to improve your problem-solving skills in JavaScript. Each section focuses on a different category of questions, ranging from array manipulation to basic algorithms and data structures.
 
+"[Get solution here](Coding_question_and_solution.md)" 
+
 ## 1. Array and Object Manipulation
 
 ### Merging Objects and Mapping Through Arrays
