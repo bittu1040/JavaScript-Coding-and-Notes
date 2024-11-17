@@ -2,10 +2,12 @@ For dedicated programmers looking to learn javascript.
 All the the core concepts of JavaScript can be found here 
 with coding challenges to solidify your knowledge.
 
+"[Get only questions here ](Coding_questions_for_practice.md)"  </br>
+
 Best of luck on your coding journey ; ) 
 
 #### improvement contributions are appreciated.
-##### I am sharing here some important questions below for practice:  
+##### I am sharing here some important questions and solution below for practice:  
 ---
 
 
