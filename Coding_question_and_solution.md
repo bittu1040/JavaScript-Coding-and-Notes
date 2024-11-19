@@ -252,6 +252,8 @@ console.log(groupByCategory(arr4, 'city'));
 // Output: { "BLR": [{ name: 'A', age: 20 }, { name: 'C', age: 21 }], "DEL": [{ name: 'B', age: 20 }] }
 ```
 
+##
+
 ### 6.  Find Duplicates in Array
 
 Write a function to identify duplicates in an array and return them as a new array.
@@ -306,6 +308,7 @@ function findDuplicate1(arr){
 }
 ```
 
+##
 
 ### 7. Count Frequency of Elements
 
@@ -343,6 +346,8 @@ function countFrequency(arr) {
 let arr = [1, 2, 2, 3, 3, 3, 4];
 console.log(countFrequency(arr)); 
 ```
+
+##
 
 ### 8. Longest String in Array
 
@@ -389,4 +394,58 @@ function findLongestStr(arr){
 }
 ```
 
+##
 
+
+### 9. Write a function to count the number of vowels in a string.
+
+
+
+#### Example
+
+Given two objects:
+
+```javascript
+const str = "Bittu bittu"
+```
+
+Output
+
+```javascript
+4   // ('i', 'u', 'i', 'u')
+```
+
+#### Solution
+
+##### Way 1: Using a for...of Loop
+
+```javascript
+function countVowels(str) {
+    let count = 0;
+    for (let char of str) {
+        if ("aeiou".includes(char.toLowerCase())) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countVowels(str)); // Output: 4
+```
+
+##### Way 2: Using reduce
+
+```javascript
+function countVowels(str) {
+    return str.split("").reduce((count, char) => {
+        if ("aeiou".includes(char.toLowerCase())) {
+            count++;
+        }
+        return count;
+    }, 0);
+}
+
+console.log(countVowels(str)); // Output: 4
+```
+
+##
