@@ -449,3 +449,57 @@ console.log(countVowels(str)); // Output: 4
 ```
 
 ##
+
+### 10. Implement a function to flatten a nested array.
+
+#### Example
+
+```javascript
+let arr = [1, [2, [3, 4, 5]]]
+```
+
+Output
+
+```javascript
+[1, 2, 3, 4, 5]
+```
+
+#### Solution
+
+##### Way 1: Using a for...of Loop
+
+```javascript
+function flattenArr(arr) {
+  let res = []
+  for (let data of arr) {
+    if (Array.isArray(data)) {
+      let flatData = flattenArr(data)
+      res.push(...flatData)
+    } else {
+      res.push(data)
+    }
+  }
+  return res
+}
+
+console.log(flattenArr(arr))  // [1, 2, 3, 4, 5]
+```
+
+##### Way 2: Using reduce
+
+```javascript
+function flattenArr(arr){
+  return arr.reduce((acc, data)=>{
+    if(Array.isArray(data)){
+      return acc.concat(flattenArr(data));
+    }
+    else{
+    return acc.concat(data)
+    }
+  }, [])
+}
+
+console.log(flattenArr(arr))  // [1, 2, 3, 4, 5]
+```
+
+##
