@@ -451,6 +451,7 @@ console.log(countVowels(str)); // Output: 4
 ##
 
 ### 10. Implement a function to flatten a nested array.
+We can solve this in different way ( for..of, reduce, flat, flatMap) 
 
 #### Example
 
@@ -500,6 +501,12 @@ function flattenArr(arr){
 }
 
 console.log(flattenArr(arr))  // [1, 2, 3, 4, 5]
+```
+
+##### Way 3: Using reduce
+
+```javascript
+console.log(arr.flat(Infinity))  // [1, 2, 3, 4, 5]
 ```
 
 ##
