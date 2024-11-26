@@ -27,6 +27,32 @@ This document covers various coding challenges and tips to improve your problem-
   Given an array of objects, group them by a specified property.  
   **Example**: Group students by age, so `[{name: 'A', age: 20}, {name: 'B', age: 20}, {name: 'C', age: 21}]` becomes `{20: [{name: 'A', age: 20}, {name: 'B', age: 20}], 21: [{name: 'C', age: 21}]}`.
 
+- **Combine Arrays Without Duplicates**  
+  Write a function that merges two arrays into one, ensuring there are no duplicate values.  
+  **Example**: `mergeArrays([1, 2, 3], [2, 3, 4])` should return `[1, 2, 3, 4]`.
+
+- **Nested Property Access**  
+  Write a function to access the value of a deeply nested property in an object using a dot-separated string.  
+  **Example**: `getProperty({ a: { b: { c: 5 } } }, 'a.b.c')` should return `5`.
+  
+- **Deep Clone an Object**  
+  Write a function to create a deep copy of a nested object without using JSON methods.
+
+- **Filter Object Keys**  
+  Write a function to remove specified keys from an object.  
+  **Example**:  
+  Input: `{ a: 1, b: 2, c: 3 }, Keys to remove: ['b', 'c']`.  
+  Output: `{ a: 1 }`.
+
+- **Calculate Sum of Object Values**  
+  Given an object with numeric values, write a function to calculate the sum of all values.  
+  **Example**:  
+  Input: `{ a: 10, b: 20, c: 30 }`  
+  Output: `60`.
+
+
+
+
 ## 2. Coding for Problem-Solving and Logic Building
 
 - **Find Duplicates in Array**  
@@ -45,6 +71,20 @@ This document covers various coding challenges and tips to improve your problem-
   Implement a function to flatten a nested array.  
   **Example**: `[1, [2, [3, 4]]]` should return `[1, 2, 3, 4]`.
 
+- **Anagram Checker**  
+  Write a function to check if two strings are anagrams of each other.  
+  **Example**: `isAnagram('listen', 'silent')` should return `true`.
+
+- **Find Missing Number**  
+  Given an array of n-1 numbers in the range 1 to n, find the missing number.  
+  **Example**: `[1, 2, 4, 5]` should return `3`.
+
+- **Majority Element**  
+  Find the element that appears more than n/2 times in an array. If no such element exists, return null.  
+  **Example**: `[3, 3, 4, 2, 3, 3]` should return `3`.
+
+  
+
 ## 3. Arrays and Strings: Common Operations
 
 - **Sorting an Array of Numbers**  
@@ -61,6 +101,19 @@ This document covers various coding challenges and tips to improve your problem-
 
 - **Find Maximum and Minimum**  
   Write a function to find the maximum and minimum elements in an array.
+
+- **Unique Characters in a String**  
+  Write a function to check if a string has all unique characters.  
+  **Example**: `"hello"` should return `false`, while `"world"` should return `true`.
+
+- **Remove Duplicates from Sorted Array**  
+  Write a function to remove duplicates from a sorted array in place.  
+  **Example**: `[1, 1, 2]` should return `[1, 2]`.
+
+- **Count Palindromic Substrings**  
+  Given a string, count all substrings that are palindromes.  
+  **Example**: `"aaa"` has 6 palindromic substrings: `"a"`, `"a"`, `"a"`, `"aa"`, `"aa"`, `"aaa"`.
+
 
 ## 4. Basic Algorithms
 
