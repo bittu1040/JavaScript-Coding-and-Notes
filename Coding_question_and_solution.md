@@ -543,3 +543,57 @@ console.log(mergeArrays(arr1, arr2))
 ```
 
 ##
+
+### 12. Write a function to remove specified keys from an object.
+
+#### Example
+
+Input
+```javascript
+ { a: 1, b: 2, c: 3 }, Keys to remove: ['b', 'c']
+```
+
+Output
+
+```javascript
+{ a: 1 }
+```
+
+#### Solution
+
+##### Way 1: Using a Object.keys and reduce
+
+```javascript
+function keysToRemove(obj, keys) {
+  return Object.keys(obj).reduce((res, key) => {
+    if (!keys.includes(key)) {
+      res[key] = obj[key];
+    }
+    return res;
+  }, {});
+}
+
+let obj = { a: 1, b: 2, c: 3 };
+let keys = ['b', 'c'];
+console.log(keysToRemove(obj, keys)); // { a: 1 }
+```
+
+##### Way 2: Using for...in
+
+```javascript
+function keysToRemove(obj, keys) {
+  const res = {}; 
+  for (const key in obj) { 
+    if (!keys.includes(key)) { 
+      res[key] = obj[key]; 
+    }
+  }
+  return res;
+}
+
+let obj = { a: 1, b: 2, c: 3 };
+let keys = ['b', 'c'];
+console.log(keysToRemove(obj, keys)); // { a: 1 }
+```
+
+##
