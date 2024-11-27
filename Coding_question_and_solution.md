@@ -510,3 +510,36 @@ console.log(arr.flat(Infinity))  // [1, 2, 3, 4, 5]
 ```
 
 ##
+
+### 11. Combine Arrays Without Duplicates
+
+ Write a function that merges two arrays into one, ensuring there are no duplicate values.
+
+
+#### Example
+
+```javascript
+mergeArrays([1, 2, 3], [2, 3, 4])
+```
+should return 
+
+```javascript
+[1, 2, 3, 4]
+```
+
+#### Solution
+
+
+
+```javascript
+let arr1= [1,2,3];
+let arr2= [2,3,4];
+
+function mergeArrays(arr1, arr2){
+  return [...new Set(arr1.concat(arr2))]
+}
+
+console.log(mergeArrays(arr1, arr2))
+```
+
+##
