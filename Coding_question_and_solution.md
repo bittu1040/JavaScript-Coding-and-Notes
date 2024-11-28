@@ -597,3 +597,31 @@ console.log(keysToRemove(obj, keys)); // { a: 1 }
 ```
 
 ##
+
+### 13. Write a function to check if two strings are anagrams of each other.
+
+#### Example
+
+```javascript
+ isAnagram('listen', 'silent') Should return true
+```
+
+#### Solution
+
+##### Way 1: Using a Object.keys and reduce
+
+```javascript
+function anagramChecker(str1, str2) {
+    if (str1.length !== str2.length) {
+        return false;
+    }
+
+    const formatStr = str => str.toLowerCase().split("").sort().join("");
+
+    return formatStr(str1) === formatStr(str2);
+}
+
+console.log(anagramChecker('listen', 'silent')) // true
+```
+
+##
