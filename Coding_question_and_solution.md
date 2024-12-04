@@ -664,4 +664,7 @@ console.log(findMissing(arr))  // 3
 console.log(findMissing(arr1)) // 6
 ```
 
+
+##### Way 2:
+we can get sum of all number in that range (1 to max) and then get sum of input array- total sum - array sum 
 ##
