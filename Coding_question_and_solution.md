@@ -625,3 +625,43 @@ console.log(anagramChecker('listen', 'silent')) // true
 ```
 
 ##
+
+### 14. Find the missing number in an array containing n−1 integers, where the numbers are in the range 1 to n.
+
+
+#### Example
+
+```javascript
+ [1, 2, 4, 5]
+```
+
+Should return
+
+```javascript
+3
+```
+
+#### Solution
+
+##### Way 1:
+
+```javascript
+function findMissing(arr){
+  arr.sort((a, b) => a - b);
+	for(let i=0;i<arr.length; i++){
+  	if(arr[i]!==i+1){
+    	return i+1;
+    }
+  }
+  return arr.length + 1;
+}
+
+
+let arr= [1,2,4,5];
+let arr1= [1,2,3,4,5]
+
+console.log(findMissing(arr))  // 3
+console.log(findMissing(arr1)) // 6
+```
+
+##
