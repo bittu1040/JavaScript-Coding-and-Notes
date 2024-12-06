@@ -669,7 +669,7 @@ console.log(findMissing(arr1)) // 6
 we can get sum of all number in that range (1 to max) and then get sum of input array- total sum - array sum 
 ##
 
-### 14. Majority Element- Find the element that appears more than n/2 times in an array. If no such element exists, return null.
+### 15. Majority Element- Find the element that appears more than n/2 times in an array. If no such element exists, return null.
 .
 
 
