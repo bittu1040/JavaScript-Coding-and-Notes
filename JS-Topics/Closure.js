@@ -103,3 +103,7 @@ function createPerson(name,age){
    console.log(person.getName());  // Bittu
    console.log(person.getAge());   // 21
    console.log(person.isAdult());  // true
+
+
+
+// Create a function in JavaScript that increments a counter each time it is called, using closures?
