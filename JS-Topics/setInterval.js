@@ -6,6 +6,8 @@
 */
 
 
+// print 1 to 10 in each 1 second using setInterval
+
 
 // print even numbers from an array at intervals of 2 seconds
 let arr = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
