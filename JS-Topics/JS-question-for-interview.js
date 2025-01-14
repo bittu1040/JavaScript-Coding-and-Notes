@@ -95,6 +95,49 @@ test1();
 */
 
 
+/*
+Guess output for below 3 example
+// Example 1
+var rate= 10;
+function getRate(){
+ console.log("rate",rate)   // output ??
+ if(rate== undefined){
+ var rate= 6;
+ return rate;
+ }
+ else{
+ return 10;
+ } 
+}
+console.log("function call ",getRate());  // output ??
+
+
+// Example 2 (replace var with let )
+let rate= 10;
+function getRate(){
+ console.log("rate",rate) // output ??
+ if(rate== undefined){
+ let rate= 6;
+ return rate;
+ }
+ else{
+ return 10;
+ } 
+}
+console.log("function call ",getRate());  // output ??
+
+
+// Example 3
+var rate= 10;
+function getRate(){
+ console.log("rate",rate)  // output ??
+ return rate;
+}
+console.log("function call ",getRate());  // output ??
+
+*/
+
+
 
 
 
