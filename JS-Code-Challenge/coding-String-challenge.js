@@ -190,3 +190,18 @@ console.log(toCamelCase("helloWorld"));   // "helloworld"
 console.log(toCamelCase("123camelCase")); // "123camelcase"
 console.log(toCamelCase("")); // Output: ""
 console.log(toCamelCase(null)); // Output: ""
+
+
+// 15. Write a program to slice a string into chunks of a given length.
+const str = 'javascript';
+const chunkSize = 3;
+
+function sliceByLength(input, size) {
+  const result = [];
+  for (let i = 0; i < input.length; i += size) {
+    result.push(input.slice(i, i + size));
+  }
+  return result;
+}
+
+console.log(sliceByLength(str, chunkSize)); // Output: ['jav', 'asc', 'rip', 't']
