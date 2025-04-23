@@ -183,3 +183,9 @@ function findDuplicate1(arr) {
 }
 
 // console.log(findDuplicate1(arr6));
+
+
+// 7. Write a function to count the frequency of each element from given array and return an object with each element and its count.
+// 8. Write a function to find and return the longest string in an array of strings.
+// 9. Write a function to count the number of vowels in a string.
+// 10.  Write a function to flatten a nested array.
