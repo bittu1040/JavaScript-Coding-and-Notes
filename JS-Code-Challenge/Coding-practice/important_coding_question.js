@@ -186,6 +186,22 @@ function findDuplicate1(arr) {
 
 
 // 7. Write a function to count the frequency of each element from given array and return an object with each element and its count.
+let arr7 = [1, 2, 3, 1, 3, 4, 2, 5, 5, 4]
+
+function countFrequency(arr){
+	let count= {};
+  for(let data of arr){
+  	if(!count[data]){
+    	count[data]=0;
+    }
+  	count[data]=count[data]+1
+  }
+  return count;
+}
+
+console.log(countFrequency(arr7));
+
+
 // 8. Write a function to find and return the longest string in an array of strings.
 // 9. Write a function to count the number of vowels in a string.
 // 10.  Write a function to flatten a nested array.
