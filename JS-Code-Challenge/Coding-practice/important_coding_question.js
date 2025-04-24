@@ -203,5 +203,20 @@ console.log(countFrequency(arr7));
 
 
 // 8. Write a function to find and return the longest string in an array of strings.
+let arr8= ["bittu", "ajay", "sachin"];
+
+function longestStr(arr){
+	let longest= arr[0];
+  for(let str of arr){
+  	if(str.length>longest.length){
+    	longest= str
+    }
+  }
+  
+  return longest
+}
+
+console.log(longestStr(arr))
+
 // 9. Write a function to count the number of vowels in a string.
 // 10.  Write a function to flatten a nested array.
