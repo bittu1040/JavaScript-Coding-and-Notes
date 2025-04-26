@@ -220,3 +220,17 @@ console.log(longestStr(arr))
 
 // 9. Write a function to count the number of vowels in a string.
 // 10.  Write a function to flatten a nested array.
+
+// 11. Write a program to remove Every Alternate Element from an Array
+function removeAlternateElements(arr) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (i % 2 !== 0) {
+      arr.splice(i, 1);
+    }
+  }
+}
+
+const originalArray = [1, 2, 3, 4, 5, 6];
+removeAlternateElements(originalArray);
+console.log(originalArray); // Output: [1, 3, 5]
+
