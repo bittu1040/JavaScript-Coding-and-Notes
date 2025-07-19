@@ -1,0 +1,36 @@
+// 1.  What will be the output of this loop?
+
+for (var i = 1; i <= 3; i++) {
+  setTimeout(() => console.log(i), 1000);
+}
+
+// 4 4 4   Because var is function-scoped — by the time the timeouts run, the loop is finished and i = 4.
+
+
+// 2. Print numbers 1 to 5 with a 1-second delay between each using setTimeout.
+for (let i = 1; i <= 5; i++) {
+  setTimeout(() => console.log(i), i * 1000);
+}
+
+//3.  Create a countdown timer from 10 to 0 using setInterval.
+let count = 10;
+const timer = setInterval(() => {
+  console.log(count);
+  count--;
+  if (count < 0) {
+    clearInterval(timer);
+  }
+}, 1000);
+
+
+
+// 4. Debounce a function using setTimeout.
+let timeout;
+
+function debounce() {
+  clearTimeout(timeout); // clear previous timer
+  timeout = setTimeout(() => {
+    console.log("Debounced!");
+  }, 500);
+}
+
