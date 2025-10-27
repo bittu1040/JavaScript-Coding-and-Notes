@@ -326,7 +326,8 @@ function groupByCity(obj) {
 
 
 // Question: 10  : grouping object data if keys are repeating/duplicate
-// inpit:  {a:1, b:2, a:3, b: 4};
+// inpit:  {a:1, b:2, a:3, b: 4}; this input is wrong it why bvecause key in javascript can not repetes. So the right inpput should be 
+//const input = [{ a: 1 },{ b: 2 },{ a: 3 },{ b: 4 }];
 // outout: {a:[1,3], b: [2,4]}
 
 function objectGrouping(obj){
