@@ -205,3 +205,16 @@ function sliceByLength(input, size) {
 }
 
 console.log(sliceByLength(str, chunkSize)); // Output: ['jav', 'asc', 'rip', 't']
+
+// 16. Write a JavaScript function to reverse the words in a given sentence and capitalize the first letter of each word.
+
+function reverseWordsWithCapital(sentence) {
+  return sentence
+    .split(' ')
+    .reverse()
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+}
+
+console.log(reverseWordsWithCapital("hello world from javascript"));
+// Output: "Javascript From World Hello"
